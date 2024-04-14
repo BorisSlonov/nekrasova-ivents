@@ -1,0 +1,396 @@
+.exchangeSection {
+  background: var(--white);
+  padding-top: 80px;
+  padding-bottom: 120px;
+  position: relative;
+  overflow: hidden;
+}
+
+.content {
+  max-width: 1240px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 234px;
+  position: relative;
+}
+
+.title {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-self: center;
+  position: relative;
+  z-index: 1;
+}
+
+.titleText {
+  font-size: 64px;
+  font-weight: 500;
+  line-height: 120%;
+  color: var(--black);
+}
+
+.subTitle {
+  color: var(--black-light-1);
+  font-size: 32px;
+  font-weight: 500;
+}
+
+.cardList {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+}
+
+.dashedCircleWrap {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.dashedCircle {
+  position: absolute;
+  top: -48px;
+}
+
+.gearIcon {
+  position: absolute;
+  top: -455px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.whiteCircle {
+  border-radius: 1240px;
+  background: var(--absolut-white);
+  width: 1240px;
+  height: 1240px;
+  position: absolute;
+  top: -610px;
+}
+
+.purpleWrap,
+.yellowWrap {
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.purpleArrow {
+  position: absolute;
+  top: 0;
+}
+
+.yellowArrow {
+  position: absolute;
+  top: 0;
+}
+
+.bage {
+  padding: 15px 47px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  border-radius: 50px;
+  border: 1px solid var(--yellow, #f8e32b);
+  background: #fff;
+  box-shadow: 27px 60px 19px 0px rgba(173, 164, 67, 0),
+    17px 39px 17px 0px rgba(173, 164, 67, 0.01),
+    10px 22px 14px 0px rgba(173, 164, 67, 0.05),
+    4px 10px 11px 0px rgba(173, 164, 67, 0.09),
+    1px 2px 6px 0px rgba(173, 164, 67, 0.1);
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 32px;
+  text-transform: uppercase;
+  position: absolute;
+}
+
+.usdBage {
+  left: -489px;
+  transform: rotate(14.972deg);
+  top: 40px;
+}
+
+.btcBage {
+  left: -500px;
+  top: 261px;
+  transform: rotate(-10deg);
+}
+
+.eurBage {
+  bottom: -408px;
+  left: -51px;
+}
+
+.usdtBage {
+  left: 327px;
+  top: 219px;
+  transform: rotate(-11.382deg);
+}
+
+@media (max-width: 1160px) {
+  .bage {
+    padding: 11px 31px;
+    font-size: 20px;
+  }
+
+  .yellowArrow {
+    width: 840px;
+    top: -40px;
+  }
+
+  .purpleArrow {
+    width: 617px;
+    top: -40px;
+  }
+
+  .usdBage {
+    left: -364px;
+  }
+
+  .btcBage {
+    left: -390px;
+  }
+
+  .eurBage {
+    bottom: -315px;
+  }
+
+  .usdtBage {
+    left: 271px;
+    top: 158px;
+  }
+}
+
+@media (max-width: 1130px) {
+  .exchangeSection {
+    padding-top: 60px;
+  }
+
+  .content {
+    gap: 218px;
+  }
+
+  .title {
+    gap: 8px;
+  }
+
+  .titleText {
+    font-size: 48px;
+    text-align: center;
+  }
+
+  .subTitle {
+    font-size: 24px;
+  }
+
+  .dashedCircle {
+    top: -100px;
+  }
+
+  .whiteCircle {
+    width: 1066px;
+    height: 1066px;
+    top: -475px;
+  }
+}
+
+@media (max-width: 920px) {
+  .cardList {
+    flex-direction: column;
+  }
+
+  .bage {
+    padding: 11px 23px;
+    font-size: 18px;
+    line-height: normal;
+  }
+
+  .bage svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .dashedCircle {
+    top: -168px;
+  }
+
+  .usdBage {
+    left: -275px;
+  }
+
+  .eurBage {
+    bottom: -235px;
+  }
+
+  .usdtBage {
+    left: 146px;
+  }
+
+  .btcBage {
+    top: 188px;
+    left: -286px;
+  }
+}
+
+@media (max-width: 900px) {
+  .cardList {
+    flex-direction: column;
+  }
+
+  .content {
+    gap: 179px;
+  }
+
+  .titleText {
+    font-size: 40px;
+  }
+
+  .subTitle {
+    font-size: 18px;
+  }
+
+  .gearIcon {
+    width: 652px;
+    height: 651px;
+    top: -345px;
+  }
+
+  .bage {
+    padding: 11px 23px;
+    font-size: 18px;
+  }
+
+  .bage svg {
+    width: 24px;
+    height: 24px;
+  }
+
+  .purpleArrow {
+    width: 440px;
+    top: -83px;
+  }
+
+  .yellowArrow {
+    width: 600px;
+    top: -100px;
+  }
+
+  .whiteCircle {
+    width: 780px;
+    height: 780px;
+    top: -355px;
+  }
+
+  .dashedCircle {
+    top: -290px;
+  }
+}
+
+@media (max-width: 560px) {
+  .bage {
+    padding: 11px 17px;
+    gap: 8px;
+    font-size: 16px;
+  }
+
+  .btcBage {
+    top: 210px;
+    left: -235px;
+  }
+
+  .usdtBage {
+    top: 209px;
+    left: 120px;
+  }
+
+  .usdBage {
+    top: 66px;
+    left: -242px;
+  }
+}
+
+@media (max-width: 500px) {
+  .exchangeSection {
+    padding-top: 28px;
+    padding-bottom: 60px;
+  }
+
+  .title {
+    gap: 0;
+  }
+
+  .titleText {
+    font-size: 32px;
+  }
+
+  .subTitle {
+    font-size: 16px;
+  }
+
+  .gearIcon {
+    width: 400px;
+    height: 400px;
+    top: -200px;
+  }
+
+  .content {
+    gap: 120px;
+  }
+
+  .purpleArrow {
+    width: 275px;
+    height: 270px;
+    top: -68px;
+  }
+
+  .yellowArrow {
+    width: 375px;
+    height: 375px;
+    top: -93px;
+  }
+
+  .whiteCircle {
+    width: 502px;
+    height: 502px;
+    top: -223px;
+  }
+
+  .usdBage {
+    transform: rotate(-15deg);
+    top: 8px;
+    left: -200px;
+  }
+
+  .btcBage {
+    top: 129px;
+    left: -177px;
+  }
+
+  .eurBage {
+    bottom: -156px;
+    left: -35px;
+  }
+
+  .usdtBage {
+    transform: rotate(18.845deg);
+    top: 89px;
+    left: 92px;
+  }
+
+  .dashedCircle {
+    top: -437px;
+    z-index: 1;
+  }
+
+  .cardList {
+    position: relative;
+    z-index: 2;
+  }
+}

@@ -1,0 +1,192 @@
+.integrate {
+  padding-top: 185px;
+  padding-bottom: 100px;
+  position: relative;
+  background: url("/processing/integrateBg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+}
+
+.content {
+  max-width: 1240px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 81px;
+  position: relative;
+}
+
+.cardList {
+  display: flex;
+  gap: 24px;
+  position: relative;
+  z-index: 1;
+}
+
+.circleBg {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.titleWrap {
+  position: absolute;
+  left: -4px;
+  top: -60px;
+}
+
+.titleText {
+  font-size: 112px;
+  font-weight: 600;
+  color: var(--black);
+  text-shadow: -3px 5px var(--yellow);
+  position: relative;
+  z-index: 3;
+}
+
+.triangleIcon {
+  position: absolute;
+  left: 37px;
+  z-index: 1;
+  top: -44px;
+}
+
+.subTitle {
+  position: absolute;
+  text-transform: uppercase;
+  color: var(--purple-main);
+  font-size: 64px;
+  font-weight: 500;
+  left: 25px;
+  top: 95px;
+  z-index: 2;
+}
+
+.circleText {
+  position: absolute;
+  right: -20px;
+  top: -130px;
+  z-index: 2;
+}
+
+.usdtIcon {
+  position: absolute;
+  right: 39%;
+  top: -26%;
+}
+
+@media (max-width: 1100px) {
+  .usdtIcon {
+    width: 171px;
+  }
+
+  .titleText {
+    font-size: 96px;
+  }
+
+  .subTitle {
+    font-size: 48px;
+  }
+
+  .circleText {
+    width: 200px;
+    height: 200px;
+    top: -125px;
+    right: 20px;
+  }
+
+  .circleBg {
+    width: 427px;
+    right: -39px;
+    top: -68px;
+  }
+
+  .usdtIcon {
+    top: -40%;
+  }
+}
+
+@media (max-width: 850px) {
+  .integrate {
+    padding-top: 98px;
+    padding-bottom: 80px;
+  }
+
+  .content {
+    gap: 0;
+  }
+
+  .titleWrap {
+    position: static;
+  }
+
+  .subTitle {
+    position: static;
+  }
+
+  .cardList {
+    flex-direction: column;
+    margin-top: 43px;
+  }
+
+  .circleBg {
+    width: 355px;
+    right: -115px;
+  }
+  .circleText {
+    width: 180px;
+    height: 180px;
+    right: 0;
+    top: -57px;
+  }
+
+  .titleText {
+    font-size: 72px;
+  }
+
+  .subTitle {
+    font-size: 48px;
+  }
+
+  .triangleIcon {
+    width: 80px;
+    height: 75px;
+    top: -20px;
+  }
+  .usdtIcon {
+    width: 107px;
+    top: -11%;
+    right: 30%;
+  }
+}
+
+@media (max-width: 590px) {
+  .integrate {
+    padding-top: 87px;
+  }
+  .titleText {
+    font-size: 48px;
+  }
+  .subTitle {
+    font-size: 24px;
+  }
+
+  .circleText {
+    width: 120px;
+    height: 120px;
+    top: -20px;
+  }
+
+  .triangleIcon {
+    width: 49px;
+    height: 47px;
+    top: -14px;
+  }
+
+  .usdtIcon {
+    top: -16%;
+    right: 19%;
+  }
+}

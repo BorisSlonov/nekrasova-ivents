@@ -1,0 +1,213 @@
+.fourthScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 80px 221px 80px;
+  position: relative;
+  overflow: hidden;
+  background: var(--white);
+}
+
+.content {
+  max-width: 1240px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  gap: 6px;
+}
+
+.topContent {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  gap: 135px;
+  flex-shrink: 0;
+  align-items: flex-start;
+}
+
+.title,
+.coinsTitle {
+  font-size: 64px;
+  color: var(--black);
+  font-weight: 500;
+  text-transform: uppercase;
+  position: absolute;
+  top: 100px;
+  width: 811px;
+  z-index: 2;
+}
+
+.descr,
+.coinsDescr {
+  font-size: 18px;
+  font-weight: 400;
+  max-width: 381px;
+  width: 100%;
+  margin-top: 201px;
+}
+
+.coinsBlock {
+  background: radial-gradient(
+    90.64% 149.26% at 50.06% 149.26%,
+    #f8e32b 0%,
+    #fcf39e 35.5%,
+    #fcfaff 79.91%
+  );
+  max-width: 819px;
+  width: 100%;
+  height: 441px;
+  border-radius: 0px 0px 32px 32px;
+  border: 2px solid rgba(133, 36, 247, 1);
+  border-top: white;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.imageWrap {
+  width: 100%;
+  height: 160px;
+  position: relative;
+  max-width: 819px;
+  margin-top: auto;
+}
+
+.coinsHeader {
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.lineBg {
+  display: flex;
+  max-height: 388px;
+  align-items: flex-end;
+  position: absolute;
+  bottom: -221px;
+  left: -90px;
+}
+
+.coinsImg {
+  width: 100%;
+  height: auto;
+}
+
+@media (max-width: 1200px) {
+  .fourthScreen {
+    padding: 0px 40px 221px 40px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .content {
+    gap: 178px;
+  }
+
+  .title {
+    font-size: 48px;
+    top: 60px;
+  }
+
+  .startedBtn {
+    margin-top: 371px;
+  }
+
+  .descr {
+    position: absolute;
+    width: 609px;
+    max-width: unset;
+    margin-top: 0;
+    top: 141px;
+    z-index: 2;
+  }
+}
+
+.coinsBlockContent {
+  display: none;
+}
+
+@media (max-width: 880px) {
+  .fourthScreen {
+    padding: 0px 24px 168px 24px;
+  }
+
+  .content {
+    gap: 0px;
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 40px;
+  }
+  .startedBtn {
+    margin: 0;
+  }
+
+  .coinsBlock {
+    padding-top: 40px;
+  }
+  .coinsHeader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  .title,
+  .descr {
+    display: none;
+  }
+
+  .coinsTitle {
+    font-size: 40px;
+    position: relative;
+    text-align: center;
+    top: 0;
+  }
+
+  .coinsDescr {
+    margin: 0;
+    max-width: 381px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 645px) {
+  .fourthScreen {
+    padding: 0px 16px 168px 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .fourthScreen {
+    padding: 0px 16px 168px 16px;
+  }
+
+  .coinsBlock {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 400px;
+  }
+
+  .coinsHeader {
+    max-width: 343px;
+    width: 100%;
+  }
+
+  .coinsTitle {
+    font-size: 32px;
+    width: 100%;
+  }
+  .coinsDescr {
+    font-size: 16px;
+    width: 100%;
+  }
+
+  .lineBg {
+    bottom: -133px;
+    left: -414px;
+  }
+}

@@ -1,0 +1,50 @@
+.articlePage {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1920px;
+  padding-top: 160px;
+  background: var(--white);
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.content {
+  max-width: 1240px;
+  width: 100%;
+}
+
+.gearIcon {
+  position: absolute;
+  left: 0;
+  top: 218px;
+}
+
+.triangleIcon {
+  position: absolute;
+  right: 22px;
+  top: 670px;
+}
+
+.header {
+  color: var(--purple-main);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 600px;
+  text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+  .articlePage {
+    padding-top: 169px;
+  }
+}
+
+@media (max-width: 640px) {
+  .articlePage {
+    padding-top: 137px;
+  }
+}

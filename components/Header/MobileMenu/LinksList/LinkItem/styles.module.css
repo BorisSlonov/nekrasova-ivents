@@ -1,0 +1,16 @@
+.linkItem {
+  padding-bottom: 24px;
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--gray);
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+
+.linkItem:hover {
+  color: var(--purple-main);
+}

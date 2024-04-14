@@ -1,0 +1,153 @@
+.thirdScreen {
+  background: url("/mainPage/thirdSectionBg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-top: 37px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 37px 80px 0 80px;
+}
+
+.content {
+  max-width: 1240px;
+  width: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.titleWrap {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+}
+
+.title {
+  font-size: 112px;
+  font-weight: 600;
+  color: var(--white);
+  position: relative;
+  z-index: 1;
+}
+
+.titleDivider {
+  width: 100%;
+  border-radius: 4px;
+  height: 8px;
+  background: var(--white-50);
+}
+
+.imageWrap {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  position: relative;
+}
+
+.triangleWrap {
+  position: absolute;
+  left: -75px;
+  top: -44px;
+}
+
+.bottomContent {
+  margin-top: 108px;
+  display: flex;
+  justify-content: space-between;
+  gap: 68px;
+}
+
+@media (max-width: 1300px) {
+  .title {
+    font-size: 96px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .thirdScreen {
+    padding: 34px 40px 0 40px;
+  }
+
+  .imageWrap {
+    width: 200px;
+    height: 200px;
+  }
+
+  .title {
+    font-size: 72px;
+  }
+
+  .triangleWrap svg {
+    width: 56px;
+    height: 53px;
+  }
+
+  .triangleWrap {
+    position: absolute;
+    left: -24px;
+    top: -19px;
+  }
+}
+
+@media (max-width: 880px) {
+  .thirdScreen {
+    padding: 8px 24px 0 24px;
+  }
+
+  .title {
+    font-size: 48px;
+  }
+
+  .imageWrap {
+    width: 180px;
+    height: 180px;
+  }
+
+  .triangleWrap {
+    position: absolute;
+    left: -14px;
+    top: -14px;
+  }
+
+  .triangleWrap svg {
+    width: 39px;
+    height: 37px;
+  }
+
+  .bottomContent {
+    flex-direction: column;
+    gap: 32px;
+    margin-top: 7px;
+  }
+}
+
+@media (max-width: 645px) {
+  .thirdScreen {
+    padding: 63px 16px 0 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .title {
+    font-size: 40px;
+  }
+
+  .titleDivider {
+    height: 4px;
+  }
+
+  .bottomContent {
+    margin-top: 24px;
+    gap: 58px;
+  }
+}

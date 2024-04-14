@@ -1,0 +1,121 @@
+.getStartedSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: url("/mainPage/getStartedBg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 139px 134px 138px 80px;
+  overflow: hidden;
+}
+
+.content {
+  max-width: 1240px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.textContent {
+  max-width: 785px;
+  width: 100%;
+}
+
+.title {
+  color: var(--absolut-white);
+  font-size: 64px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.colorText {
+  color: var(--yellow);
+}
+
+.subTitle {
+  color: var(--white-30);
+  font-size: 64px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.btnWrap {
+  position: relative;
+}
+
+.roundText {
+  position: absolute;
+  top: -219px;
+  left: -147px;
+}
+
+@media (max-width: 1240px) {
+  .title,
+  .subTitle {
+    font-size: 48px;
+  }
+
+  .textContent {
+    max-width: 665px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .getStartedSection {
+    padding: 167px 103px 167px 40px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .getStartedSection {
+    padding: 48px 40px 60px 40px;
+  }
+
+  .content {
+    flex-direction: column;
+    gap: 40px;
+    justify-content: normal;
+    align-items: flex-start;
+  }
+  .roundText {
+    display: none;
+  }
+
+  .textContent {
+    max-width: 650px;
+    width: 100%;
+  }
+
+  .btnWrap {
+    align-self: center;
+  }
+}
+
+@media (max-width: 880px) {
+  .getStartedSection {
+    padding: 48px 24px 60px 24px;
+  }
+  .title,
+  .subTitle {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 645px) {
+  .getStartedSection {
+    padding: 48px 16px 60px 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .title,
+  .subTitle {
+    text-align: center;
+    font-size: 32px;
+  }
+  .content {
+    gap: 28px;
+  }
+}

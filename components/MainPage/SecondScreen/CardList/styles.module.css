@@ -1,0 +1,11 @@
+.cardList {
+  margin-top: 56px;
+  display: flex;
+  gap: 24px;
+}
+
+@media (max-width: 930px) {
+  .cardList {
+    flex-direction: column;
+  }
+}

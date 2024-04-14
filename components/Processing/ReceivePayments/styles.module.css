@@ -1,0 +1,241 @@
+.receivePayments {
+  background: url("/processing/processingMainBg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.sectionWrap {
+  padding-top: 208px;
+  padding-bottom: 263px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content {
+  max-width: 1240px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 81px;
+  position: relative;
+}
+
+.title {
+  font-size: 64px;
+  font-weight: 500;
+  text-transform: uppercase;
+
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.titleText {
+  max-width: 820px;
+  width: 100%;
+}
+
+.shadowText {
+  text-shadow: -3px 5px var(--yellow);
+}
+
+.colorText {
+  color: var(--purple-main);
+  position: relative;
+}
+
+.btnContent {
+  align-self: center;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  align-items: center;
+  position: relative;
+}
+
+.btnText {
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--black);
+}
+
+.startedBtn {
+  width: 267px;
+}
+
+.buttonBg {
+  position: absolute;
+  top: -155px;
+  right: -20px;
+}
+
+.ellipse {
+  position: absolute;
+  top: 145px;
+  right: 197px;
+  width: 720px;
+  height: 720px;
+}
+
+.usdtIcon {
+  position: absolute;
+  right: 204px;
+  top: 237px;
+}
+
+.btcIcon {
+  top: 384px;
+  position: absolute;
+  width: 198px;
+  right: 115px;
+}
+
+.ethIcon {
+  width: 197px;
+  right: 123px;
+  bottom: 130px;
+  position: absolute;
+}
+
+@media (max-width: 1280px) {
+  .ellipse {
+    right: 120px;
+  }
+
+  .usdtIcon {
+    right: 115px;
+  }
+
+  .btcIcon {
+    right: 40px;
+  }
+
+  .ethIcon {
+    right: 21px;
+    bottom: 124px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .sectionWrap {
+    padding-bottom: 309px;
+  }
+
+  .title {
+    font-size: 48px;
+    gap: 43px;
+  }
+
+  .titleText {
+    max-width: 600px;
+  }
+
+  .ellipse {
+    right: 84px;
+    top: 148px;
+  }
+
+  .usdtIcon {
+    width: 164px;
+    height: 156px;
+    right: 97px;
+    top: 202px;
+  }
+
+  .btcIcon {
+    width: 150px;
+    top: 306px;
+    right: 53px;
+  }
+
+  .ethIcon {
+    width: 150px;
+    bottom: 330px;
+  }
+}
+
+@media (max-width: 850px) {
+  .usdtIcon {
+    right: 160px;
+    top: 137px;
+  }
+
+  .ethIcon {
+    right: 41px;
+  }
+}
+
+@media (max-width: 640px) {
+  .sectionWrap {
+    padding-bottom: 242px;
+  }
+
+  .content {
+    gap: 108px;
+  }
+
+  .ellipse {
+    right: 80px;
+  }
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 40px;
+    gap: 34px;
+  }
+
+  .titleText {
+    max-width: 441px;
+  }
+
+  .usdtIcon {
+    right: 63px;
+    top: 296px;
+    width: 103px;
+  }
+
+  .ethIcon {
+    bottom: 292px;
+    width: 92px;
+  }
+
+  .btcIcon {
+    top: 337px;
+    right: 41px;
+    width: 93px;
+  }
+
+  .content {
+    gap: 150px;
+  }
+}
+
+@media (max-width: 472px) {
+  .sectionWrap {
+    padding-bottom: 213px;
+    padding-top: 158px;
+  }
+
+  .titleText {
+    max-width: 325px;
+  }
+
+  .usdtIcon {
+    top: 260px;
+  }
+
+  .ethIcon {
+    bottom: 247px;
+  }
+
+  .btcIcon {
+    top: 365px;
+  }
+}

@@ -1,0 +1,9 @@
+.categoryBage {
+  border-radius: 12px;
+  background: var(--purple-light-3);
+  padding: 4px 12px;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  text-transform: uppercase;
+}

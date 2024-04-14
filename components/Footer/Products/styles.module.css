@@ -1,0 +1,27 @@
+.products {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.link {
+  font-size: 16px;
+  color: var(--purple-main);
+  font-weight: 400;
+}
+
+.link:hover {
+  color: var(--purple-light-2);
+}
+
+@media (max-width: 600px) {
+  .products {
+    margin-top: 24px;
+  }
+}

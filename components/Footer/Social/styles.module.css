@@ -1,0 +1,62 @@
+.social {
+  max-width: 247px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.supportBlock {
+  padding: 16px;
+  border-radius: 16px;
+  border: 1px solid var(--black-light-4);
+  background: var(--purple-light-4);
+  display: flex;
+  flex-direction: column;
+  gap: 71px;
+}
+
+.supportBlock:hover {
+  border: 1px solid var(--yellow);
+}
+
+.logo {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+}
+
+.link {
+  font-size: 16px;
+  color: var(--purple-main);
+  font-weight: 400;
+}
+
+.arrow {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.iconsLinks {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.link {
+}
+
+.link:hover svg {
+  opacity: 0.7;
+}
+
+@media (max-width: 600px) {
+  .social {
+    max-width: unset;
+    width: 100%;
+    margin-top: 40px;
+    gap: 24px;
+  }
+}

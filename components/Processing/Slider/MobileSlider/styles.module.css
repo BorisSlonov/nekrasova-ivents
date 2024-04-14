@@ -1,0 +1,31 @@
+.mobileSlider {
+  width: 100%;
+  background: url("/processing/building.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 66px 0 47px 0;
+  display: none;
+}
+
+.swiperSlide {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+}
+
+@media (max-width: 820px) {
+  .mobileSlider {
+    display: block;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    .mySwiper {
+      display: none;
+    }
+  }
+}

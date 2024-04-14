@@ -1,0 +1,132 @@
+.notFound {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1920px;
+  padding-top: 187px;
+  background: var(--white);
+  flex-grow: 1;
+  overflow: hidden;
+  background: var(--purple-light-4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: url("/notFound/404Bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 793px;
+}
+
+.title {
+  font-size: 112px;
+  font-weight: 600;
+  line-height: 120%;
+  color: white;
+  position: relative;
+}
+
+.triangleIcon {
+  position: absolute;
+  left: -50px;
+  top: -22px;
+}
+
+.titleText {
+  position: relative;
+  z-index: 1;
+}
+
+.middleContent {
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--black);
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 40px;
+}
+
+.mainPageLink {
+  padding: 16px 32px;
+  background: var(--purple-main);
+  border-radius: 50px;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 22px;
+  text-transform: uppercase;
+  color: var(--white);
+}
+
+.numbers {
+  min-width: 1920px;
+  display: flex;
+  gap: 72px;
+  margin-top: 89px;
+}
+
+.number {
+  color: var(--purple-light-2);
+  font-size: 250px;
+  font-weight: 600;
+  line-height: 120%;
+}
+
+@media (max-width: 640px) {
+  .notFound {
+    background: url("/notFound/404MobileBg.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 176px;
+    min-height: 745px;
+    align-items: flex-start;
+  }
+
+  .middleContent {
+    margin-left: 40px;
+    margin-top: 100px;
+  }
+
+  .title {
+    font-size: 96px;
+
+    margin-left: 81px;
+  }
+
+  .triangleIcon {
+    width: 60px;
+    height: 56px;
+    left: -29px;
+  }
+}
+
+@media (max-width: 620px) {
+  .middleContent {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .arrowIcon {
+    display: none;
+  }
+
+  .mainPageLink {
+    width: 248px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 405px) {
+  .title {
+    font-size: 72px;
+    margin-left: 43px;
+  }
+
+  .middleContent {
+    margin-left: 24px;
+  }
+}

@@ -1,0 +1,70 @@
+.listItem {
+  padding-bottom: 40px;
+  border-bottom: 2px solid var(--gray);
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 500;
+  color: var(--black);
+}
+
+.arrowWrap {
+  transition: transform 0.3s;
+}
+
+.arrowWrap svg path {
+  transition: all 0.3s;
+}
+
+.arrow {
+  transition: all 0.3s;
+}
+
+.rotatedArrow {
+  transform: rotate(80deg);
+}
+
+.rotatedArrow path {
+  stroke: var(--purple-main);
+}
+
+.textWrap {
+  overflow: hidden;
+}
+
+.textContent {
+  font-size: 18px;
+  color: var(--black-light-1);
+  font-weight: 400;
+  max-width: 820px;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.textContent ul,
+.textContent ol {
+  padding-left: 20px;
+}
+
+.textContent a {
+  color: blue;
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 24px;
+  }
+
+  .listItem {
+    padding-bottom: 16px;
+  }
+}

@@ -1,0 +1,22 @@
+.navigation {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.navLink {
+  color: var(--black);
+  font-size: 18px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.navLink:hover {
+  color: var(--purple-main);
+}
+
+@media (max-width: 1024px) {
+  .navigation {
+    display: none;
+  }
+}

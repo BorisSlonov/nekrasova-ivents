@@ -1,33 +1,68 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+html {
+  width: 100vw;
+}
+html {
+  scroll-padding-top: 114px;
 }
 
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  align-items: center;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+body::-webkit-scrollbar {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button,
+input {
+  font-family: inherit;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.hideScroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hideScroll::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --white-50: rgba(252, 250, 255, 0.5);
+  --white-30: rgba(252, 250, 255, 0.3);
+  --white-10: rgba(255, 255, 255, 0.1);
+  --white: #fcfaff;
+  --purple-main: #5603a9;
+  --black: #1d1d1b;
+  --gray: #b2b2b2;
+  --yellow: #f8e32b;
+  --absolut-white: #fff;
+  --purple-light-1: #7835ba;
+  --purple-light-2: #9a68cb;
+  --purple-light-3: #bb9add;
+  --purple-light-4: #ddcdee;
+  --black-light-1: #4a4a49;
+  --black-light-2: #777776;
+  --black-light-4: #d2d2d1;
+}
+
+[data-theme="dark"] {
+  --white-30: red;
 }

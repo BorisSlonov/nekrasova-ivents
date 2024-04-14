@@ -1,0 +1,64 @@
+.filters {
+  padding: 24px 32px;
+  border-radius: 100px;
+  border: 2px solid var(--purple-light-4);
+  background: var(--absolut-white);
+  box-shadow: 0px 510px 143px 0px rgba(177, 160, 202, 0),
+    0px 327px 131px 0px rgba(177, 160, 202, 0.01),
+    0px 184px 110px 0px rgba(177, 160, 202, 0.05),
+    0px 82px 82px 0px rgba(177, 160, 202, 0.09),
+    0px 20px 45px 0px rgba(177, 160, 202, 0.1);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.filtersWrap {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  gap: 16px;
+}
+
+.filterItem {
+  padding: 16px 24px;
+  max-width: 223px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50px;
+  border: 2px solid var(--purple-light-4);
+  cursor: pointer;
+}
+
+.filterItem:hover {
+  border-color: var(--purple-main);
+}
+
+@media (max-width: 700px) {
+  .filters {
+    padding: 16px;
+  }
+
+  .filterItem {
+    padding: 11px 18px;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+@media (max-width: 567px) {
+  .filters {
+    overflow-x: auto;
+  }
+
+  .filtersWrap {
+    min-width: 567px;
+    gap: 8px;
+  }
+}
