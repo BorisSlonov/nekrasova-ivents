@@ -1,10 +1,12 @@
+import { getLegalPage } from "@/actions/getLegalPage";
 import Legal from "@/components/Legal";
-import { privacyPolicy } from "@/legalText/privacyPolicy";
 
 import React from "react";
 
-const PrivacyPolicy = () => {
-  return <Legal data={privacyPolicy} />;
+const PrivacyPolicy = async () => {
+  const pageIdInStrapi = 6;
+  const pageData = await getLegalPage(pageIdInStrapi);
+  return <Legal data={pageData} />;
 };
 
 export default PrivacyPolicy;

@@ -46,6 +46,7 @@
   color: black;
   font-weight: 500;
   line-height: 140%;
+  white-space: pre-wrap;
 }
 
 .image {

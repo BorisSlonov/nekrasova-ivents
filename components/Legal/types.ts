@@ -1,6 +1,7 @@
 interface AccordItem {
   title: string;
   descr: string;
+  id: number;
 }
 
 export interface IAccordeonData {
@@ -11,6 +12,9 @@ export interface IAccordeonData {
 export interface ILegalPageData {
   pageTitle: string;
   date: string;
+  createdAt: string;
+  updatedAt: string;
+  publishedAt: string;
   pageDescr: string;
-  accordeonContent: IAccordeonData[];
+  Accordeon: AccordItem[];
 }

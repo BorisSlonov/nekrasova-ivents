@@ -17,6 +17,14 @@ const nextConfig = {
       },
     ];
   },
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "admin.cryptopayments.com",
+      },
+    ],
+  },
 };
 
 export default nextConfig;

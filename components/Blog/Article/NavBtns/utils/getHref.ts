@@ -1,22 +1,32 @@
-import { articlesConfig } from "@/components/Blog/articlesConfig";
+import { IArticle, IBlogFilters } from "@/components/Blog/types";
 
-export const getHref = (btnType: "prev" | "next", pageId: string) => {
-  const configKeys = Object.keys(articlesConfig);
+export const getHref = (
+  btnType: "prev" | "next",
+  pageId: string,
+  articles: IArticle[],
+  curFilter: IBlogFilters
+) => {
+  const numPageId = Number(pageId);
+  const curItemIndex = articles.findIndex((item) => item.id === numPageId);
+  const filter = curFilter ? `?filter=${curFilter}` : "";
 
-  const isStart = configKeys[0] === pageId;
-  const isEnd = Number(pageId) === configKeys.length;
+  if (btnType === "next") {
+    const nextArticle = articles[curItemIndex + 1];
+    if (nextArticle) {
+      return `${nextArticle.id}${filter}`;
+    } else {
+      return `${pageId}${filter}`;
+    }
+  }
 
   if (btnType === "prev") {
-    if (isStart) {
-      return pageId;
+    const prevArticle = articles[curItemIndex - 1];
+    if (prevArticle) {
+      return `${prevArticle.id}${filter}`;
+    } else {
+      return `${pageId}${filter}`;
     }
-
-    return Number(pageId) - 1;
-  } else {
-    if (isEnd) {
-      return pageId;
-    }
-
-    return Number(pageId) + 1;
   }
+
+  return `${pageId}${filter}`;
 };

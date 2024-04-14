@@ -40,6 +40,10 @@
   border-color: var(--purple-main);
 }
 
+.active {
+  border-color: var(--purple-main);
+}
+
 @media (max-width: 700px) {
   .filters {
     padding: 16px;

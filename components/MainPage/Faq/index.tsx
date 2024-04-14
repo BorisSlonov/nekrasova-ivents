@@ -1,12 +1,14 @@
 import React from "react";
 import styles from "./styles.module.css";
-import FaqList from "@/components/ui/FaqList";
-import { config } from "./config";
 import BigCircle from "@/components/ui/BigCircle";
 import Arrow from "./icons/arrow";
 import Link from "next/link";
+import FaqList from "./FaqList";
+import { getMainPageFaq } from "@/actions/getMainPageFaq";
 
-const Faq = () => {
+const Faq = async () => {
+  const faqData = await getMainPageFaq();
+
   return (
     <section className={styles.faq}>
       <div id="faq" className={styles.content}>
@@ -17,8 +19,7 @@ const Faq = () => {
             Everything you need to know about the product
           </span>
         </div>
-
-        <FaqList className={styles.faqList} data={config} />
+        <FaqList listData={faqData} />
 
         <div className={styles.showMore}>
           <span className={styles.showMoreText}>

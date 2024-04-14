@@ -1,9 +1,13 @@
+import { getLegalPage } from "@/actions/getLegalPage";
 import Legal from "@/components/Legal";
-import { cookiesPolicy } from "@/legalText/cookiesPolicy";
+
 import React from "react";
 
-const CookiesPolicy = () => {
-  return <Legal data={cookiesPolicy} />;
+const CookiesPolicy = async () => {
+  const pageIdInStrapi = 5;
+  const pageData = await getLegalPage(pageIdInStrapi);
+
+  return <Legal data={pageData} />;
 };
 
 export default CookiesPolicy;

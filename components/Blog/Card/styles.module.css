@@ -51,6 +51,7 @@
   position: absolute;
   top: 0;
   max-height: 122px;
+  min-height: 122px;
 }
 
 .linkBtn {

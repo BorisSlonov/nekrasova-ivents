@@ -8,11 +8,16 @@ import Inst from "./icons/inst";
 import Face from "./icons/face";
 import Tlg from "./icons/tlg";
 import Linked from "./icons/linked";
+import { getContacts } from "@/actions/getContacts";
 
-const Social = () => {
+const Social = async () => {
+  const {
+    attributes: { email, Instagram, LinkedIn, facebook, telegram },
+  } = await getContacts();
+
   return (
     <div className={styles.social}>
-      <Link prefetch={false} href={"mailto:support@cryptopayments.com"}>
+      <Link prefetch={false} href={`mailto:${email}`}>
         <div className={styles.supportBlock}>
           <FooterTitle>Support:</FooterTitle>
           <span className={styles.link}>support@cryptopayments.com</span>
@@ -28,29 +33,16 @@ const Social = () => {
         </div>
       </Link>
       <div className={styles.iconsLinks}>
-        <Link
-          className={styles.link}
-          href={
-            "https://www.instagram.com/crypto_payments?igsh=MXh6Y3EydXhwaDV2aA=="
-          }
-        >
+        <Link className={styles.link} href={Instagram}>
           <Inst />
         </Link>
-        <Link
-          className={styles.link}
-          href={
-            "https://www.facebook.com/profile.php?id=61555951127771&mibextid=LQQJ4d"
-          }
-        >
+        <Link className={styles.link} href={facebook}>
           <Face />
         </Link>
-        <Link className={styles.link} href={"https://t.me/Cryptopayments_B2B"}>
+        <Link className={styles.link} href={telegram}>
           <Tlg />
         </Link>
-        <Link
-          className={styles.link}
-          href={"https://www.linkedin.com/company/cryptopayments-com/"}
-        >
+        <Link className={styles.link} href={LinkedIn}>
           <Linked />
         </Link>
       </div>

@@ -1,8 +1,12 @@
 import React from "react";
 import styles from "./styles.module.css";
 
-const CaterogyBage = () => {
-  return <div className={styles.categoryBage}>Articles</div>;
+interface Props {
+  category: string;
+}
+
+const CaterogyBage = ({ category }: Props) => {
+  return <div className={styles.categoryBage}>{category}</div>;
 };
 
 export default CaterogyBage;

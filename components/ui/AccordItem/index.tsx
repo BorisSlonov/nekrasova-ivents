@@ -1,16 +1,19 @@
 import React, { useState } from "react";
 import styles from "./styles.module.css";
-import Arrow from "../icons/arrow";
-import { IFaqItem } from "../types";
+
 import { AnimatePresence, motion } from "framer-motion";
 import cn from "classnames";
+import ReactMarkdown from "react-markdown";
+import { animVariants } from "./animVariants";
+import Arrow from "./icons/arrow";
+import { IAccordItem } from "./types";
 
 interface Props {
   className?: string;
-  data: IFaqItem;
+  data: IAccordItem;
 }
 
-const FaqItem = ({ data, className }: Props) => {
+const AccordItem = ({ data, className }: Props) => {
   const { title, descr } = data;
 
   const [showText, setShowText] = useState(false);
@@ -33,21 +36,15 @@ const FaqItem = ({ data, className }: Props) => {
       <AnimatePresence>
         {showText && (
           <motion.div
-            initial={{ height: 0, opacity: 0 }}
-            animate={{
-              height: "auto",
-              opacity: 1,
-            }}
-            exit={{
-              height: 0,
-              opacity: 0,
-            }}
+            variants={animVariants}
+            initial={"initial"}
+            animate={"animate"}
+            exit={"initial"}
             className={styles.textWrap}
           >
-            <div
-              dangerouslySetInnerHTML={{ __html: descr }}
-              className={styles.textContent}
-            />
+            <ReactMarkdown className={styles.textContent}>
+              {descr}
+            </ReactMarkdown>
           </motion.div>
         )}
       </AnimatePresence>
@@ -55,4 +52,4 @@ const FaqItem = ({ data, className }: Props) => {
   );
 };
 
-export default FaqItem;
+export default AccordItem;

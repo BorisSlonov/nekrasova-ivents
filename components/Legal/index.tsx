@@ -1,16 +1,16 @@
 import React from "react";
 import styles from "./styles.module.css";
 import SectionWrap from "../ui/SectionWrap";
-import FaqList from "../ui/FaqList";
-
 import { ILegalPageData } from "./types";
+import LegalAccord from "./LegalAccord";
+import ReactMarkdown from "react-markdown";
 
 interface Props {
   data: ILegalPageData;
 }
 
 const Legal = ({ data }: Props) => {
-  const { date, pageTitle, pageDescr, accordeonContent } = data;
+  const { date, pageTitle, pageDescr, Accordeon: accordeonContent } = data;
 
   const showDescr = pageDescr && pageDescr.length > 0;
   const showAccordeon = accordeonContent.length > 0;
@@ -24,16 +24,11 @@ const Legal = ({ data }: Props) => {
         </div>
 
         {showDescr && (
-          <div
-            dangerouslySetInnerHTML={{ __html: pageDescr }}
-            className={styles.descr}
-          />
+          <ReactMarkdown className={styles.descr}>{pageDescr}</ReactMarkdown>
         )}
         {showAccordeon && (
           <div className={styles.mainInfo}>
-            {accordeonContent.map((item, i) => {
-              return <FaqList key={i} data={item} />;
-            })}
+            <LegalAccord data={accordeonContent} />
           </div>
         )}
       </div>

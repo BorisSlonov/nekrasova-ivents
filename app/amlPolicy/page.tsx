@@ -1,9 +1,12 @@
+import { getLegalPage } from "@/actions/getLegalPage";
 import Legal from "@/components/Legal";
-import { amlPolicy } from "@/legalText/amlPolicy";
 import React from "react";
 
-const AmlPolicy = () => {
-  return <Legal data={amlPolicy} />;
+const AmlPolicy = async () => {
+  const pageIdInStrapi = 3;
+  const pageData = await getLegalPage(pageIdInStrapi);
+
+  return <Legal data={pageData} />;
 };
 
 export default AmlPolicy;

@@ -5,21 +5,21 @@ export const filters = [
   },
   {
     title: "Events",
-    href: "/blog?filter=events",
+    href: "/blog?filter=Events",
   },
 
   {
     title: "News",
-    href: "/blog?filter=news",
+    href: "/blog?filter=News",
   },
 
   {
     title: "Explainers",
-    href: "/blog?filter=explainers",
+    href: "/blog?filter=Explainers",
   },
 
   {
     title: "Articles",
-    href: "/blog?filter=articles",
+    href: "/blog?filter=Articles",
   },
 ];

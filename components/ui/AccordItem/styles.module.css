@@ -48,6 +48,7 @@
   max-width: 820px;
   width: 100%;
   margin-top: 24px;
+  white-space: pre-wrap;
 }
 
 .textContent ul,

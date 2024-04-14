@@ -4,25 +4,22 @@ import Arrow from "./icons/arrow";
 import CalendarIcon from "./icons/calendarIcon";
 import Image from "next/image";
 import Link from "next/link";
+import { IEventAttributes } from "./types";
 
 interface Props {
-  cardData: {
-    title: string;
-    city: string;
-    date: string;
-    link: string;
-    image: string;
-  };
+  cardData: IEventAttributes;
 }
 
 const Card = ({ cardData }: Props) => {
-  const { city, date, link, title, image } = cardData;
+  const { date, place, name, link, img } = cardData;
+
+  const imgLink = process.env.CMS_URL + img.data.attributes.url;
 
   return (
     <li className={styles.card}>
       <Link className={styles.link} prefetch={false} href={link}>
         <div className={styles.header}>
-          <span className={styles.title}>{title}</span>
+          <span className={styles.title}>{name}</span>
           <Arrow />
         </div>
 
@@ -32,15 +29,16 @@ const Card = ({ cardData }: Props) => {
               <CalendarIcon />
               <span className={styles.date}>{date}</span>
             </div>
-            <div className={styles.descr}>{city}</div>
+            <div className={styles.descr}>{place}</div>
           </div>
           <Image
-            src={image}
+            src={imgLink}
             width={349}
             height={120}
             sizes="100vw"
             alt="card image"
             className={styles.image}
+            priority
           />
         </div>
       </Link>
