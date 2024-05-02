@@ -1,15 +1,25 @@
-import React from "react";
+"use client";
+
+import React, { useRef } from "react";
+import styles from "./styles.module.css";
+import { useInView } from "framer-motion";
+import cn from "classnames";
 
 const Bg = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(containerRef, { once: true });
   return (
-    <svg
+    <div ref={containerRef}>
+    <svg 
       width="976"
       height="594"
       viewBox="0 0 976 594"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      className={cn(styles.bgWrap, { [styles.bgWrap_active]: isInView })}
     >
       <path
+
         d="M10.2879 596.994L614.609 32.7075C619.238 28.3922 626.519 33.4761 623.998 39.316L381.432 598.14L10.2879 596.994Z"
         fill="url(#paint0_linear_2041_6320)"
       />
@@ -87,6 +97,7 @@ const Bg = () => {
         </linearGradient>
       </defs>
     </svg>
+    </div>
   );
 };
 

@@ -8,13 +8,11 @@ import { getMainPageFaq } from "@/actions/getMainPageFaq";
 
 const Faq = async () => {
   const faqData = await getMainPageFaq();
-
   return (
     <section className={styles.faq}>
       <div id="faq" className={styles.content}>
         <div className={styles.header}>
           <h2 className={styles.title}>FAQ</h2>
-
           <span className={styles.subTitle}>
             Everything you need to know about the product
           </span>

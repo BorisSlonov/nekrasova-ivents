@@ -34,6 +34,7 @@ const Article = ({ articleData, pageId, curFilter }: Props) => {
           className={styles.navBtns}
         />
       </div>
+
       <Image
         quality={100}
         alt={"article image"}

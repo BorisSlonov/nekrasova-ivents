@@ -28,6 +28,12 @@
   font-size: 64px;
   font-weight: 500;
   text-transform: uppercase;
+  transform: translateX(-200%);
+  transition: transform .8s;
+}
+
+.title_active {
+  transform: translateX(0);
 }
 
 .colorText {
@@ -49,9 +55,16 @@
   position: absolute;
   top: -219px;
   left: -147px;
+  transform: rotate(-180deg);
+  transition: transform .8s;
+}
+
+.roundText_active {
+  transform: rotate(0);
 }
 
 @media (max-width: 1240px) {
+
   .title,
   .subTitle {
     font-size: 48px;
@@ -79,6 +92,7 @@
     justify-content: normal;
     align-items: flex-start;
   }
+
   .roundText {
     display: none;
   }
@@ -97,6 +111,7 @@
   .getStartedSection {
     padding: 48px 24px 60px 24px;
   }
+
   .title,
   .subTitle {
     font-size: 40px;
@@ -110,11 +125,13 @@
 }
 
 @media (max-width: 600px) {
+
   .title,
   .subTitle {
     text-align: center;
     font-size: 32px;
   }
+
   .content {
     gap: 28px;
   }

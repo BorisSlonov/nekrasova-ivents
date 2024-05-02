@@ -1,6 +1,6 @@
 .firstScreen {
   width: 100%;
-  background-image: url("/mainPage/mainPageFirstScreen.png");
+  /* background-image: url("/mainPage/mainPageFirstScreen.png"); */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -16,6 +16,7 @@
   width: 100%;
   align-self: center;
   position: relative;
+  z-index: 3;
 }
 
 .topContent {
@@ -29,6 +30,12 @@
   font-weight: 600;
   max-width: 876px;
   width: 100%;
+  transform: translateX(-200%);
+  transition: transform 0.8s;
+}
+
+.pcAnimTitle {
+  transform: translate(0);
 }
 
 .business {
@@ -43,6 +50,13 @@
   position: absolute;
   right: -45px;
   top: -29px;
+  height: auto;
+  transform: rotate(180deg);
+  transition: transform 0.8s;
+}
+
+.pcAnimImage {
+  transform: rotate(0deg);
 }
 
 .bottomContent {
@@ -50,8 +64,13 @@
   display: flex;
   align-items: center;
   gap: 130px;
-
+  transform: translateY(1000%);
   width: 100%;
+  transition: transform 0.8s;
+}
+
+.pcAnimBottomContent {
+  transform: translateY(0);
 }
 
 .startedContent {
@@ -107,6 +126,14 @@
   font-size: 24px;
   font-weight: 500;
   color: var(--black);
+}
+
+.bgImage {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  object-fit: cover;
 }
 
 @media (max-width: 1410px) {

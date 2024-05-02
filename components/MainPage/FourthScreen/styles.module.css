@@ -24,6 +24,20 @@
   gap: 135px;
   flex-shrink: 0;
   align-items: flex-start;
+  justify-content: flex-end;
+  flex-shrink: 0;
+  width: 381px;
+}
+
+.titleWrap {
+  transform: translateX(-200%);
+  transition: transform .8s;
+  position: relative;
+  z-index: 10;
+}
+
+.titleWrap_active {
+  transform: translate(0);
 }
 
 .title,
@@ -38,22 +52,23 @@
   z-index: 2;
 }
 
+.title {
+  position: static;
+}
+
 .descr,
 .coinsDescr {
   font-size: 18px;
   font-weight: 400;
   max-width: 381px;
   width: 100%;
-  margin-top: 201px;
 }
 
 .coinsBlock {
-  background: radial-gradient(
-    90.64% 149.26% at 50.06% 149.26%,
-    #f8e32b 0%,
-    #fcf39e 35.5%,
-    #fcfaff 79.91%
-  );
+  background: radial-gradient(90.64% 149.26% at 50.06% 149.26%,
+      #f8e32b 0%,
+      #fcf39e 35.5%,
+      #fcfaff 79.91%);
   max-width: 819px;
   width: 100%;
   height: 441px;
@@ -94,6 +109,20 @@
 .coinsImg {
   width: 100%;
   height: auto;
+  transform: scale(1.1) translateY(-100%);
+  transition: transform .8s;
+}
+
+.coinsImg_active {
+  transform: scale(1.1) translateY(25%);
+}
+
+.topText {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: absolute;
+  top: 100px;
 }
 
 @media (max-width: 1200px) {
@@ -103,10 +132,6 @@
 }
 
 @media (max-width: 1024px) {
-  .content {
-    gap: 178px;
-  }
-
   .title {
     font-size: 48px;
     top: 60px;
@@ -117,11 +142,9 @@
   }
 
   .descr {
-    position: absolute;
     width: 609px;
     max-width: unset;
     margin-top: 0;
-    top: 141px;
     z-index: 2;
   }
 }
@@ -135,19 +158,26 @@
     padding: 0px 24px 168px 24px;
   }
 
+  .topContent {
+    align-items: center;
+  }
+
   .content {
     gap: 0px;
     flex-direction: column-reverse;
     align-items: center;
     gap: 40px;
   }
+
   .startedBtn {
     margin: 0;
   }
 
   .coinsBlock {
     padding-top: 40px;
+    justify-content: space-between;
   }
+
   .coinsHeader {
     display: flex;
     align-items: center;
@@ -189,7 +219,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 400px;
+    height: auto;
   }
 
   .coinsHeader {
@@ -201,6 +231,7 @@
     font-size: 32px;
     width: 100%;
   }
+
   .coinsDescr {
     font-size: 16px;
     width: 100%;

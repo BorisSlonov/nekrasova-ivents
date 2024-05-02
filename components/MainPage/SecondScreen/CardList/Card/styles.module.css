@@ -1,6 +1,6 @@
 .card {
   max-width: 397px;
-  width: calc(100% / 3);
+  width: 100%;
   padding: 24px;
   border-radius: 24px;
   border: 1px solid var(--black, #1d1d1b);
@@ -10,7 +10,12 @@
   position: relative;
   z-index: 1;
   background: var(--absolut-white);
-  transition: box-shadow 0.3s;
+  transition: box-shadow 0.3s, transform 0.8s;
+  transform: translateY(50%);
+}
+
+.card_active {
+  transform: translateY(0);
 }
 
 .card:hover {

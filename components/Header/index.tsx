@@ -29,23 +29,15 @@ const Header = () => {
           <div className={styles.headerContent}>
             <Link className={styles.logoLink} href={"/"}>
               <LogoIcon className={styles.logo} />
-              <MobileLogo className={styles.mobileLogo} />
             </Link>
             <Navigation />
-
             <div className={styles.links}>
               <div className={styles.btnLinks}>
                 <Link
-                  className={styles.joinLink}
-                  href={"https://app.cryptopayments.com/cabinet/cregister"}
+                  className={styles.callLink}
+                  href={"tel:+7(952)184-90-96"}
                 >
-                  join now
-                </Link>
-                <Link
-                  className={styles.loginLink}
-                  href={"https://app.cryptopayments.com/cabinet/login"}
-                >
-                  login
+                +7(952)184-90-96
                 </Link>
               </div>
               <button

@@ -4,6 +4,12 @@
   gap: 40px;
   flex-shrink: 0;
   align-items: flex-start;
+  transform: translateY(50%);
+  transition: transform .8s;
+}
+
+.startedContent_active {
+  transform: translateY(0);
 }
 
 .textWrap {

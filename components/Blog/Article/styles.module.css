@@ -49,6 +49,10 @@
   white-space: pre-wrap;
 }
 
+.text a {
+  color: blue;
+}
+
 .image {
   width: 100%;
   height: auto;

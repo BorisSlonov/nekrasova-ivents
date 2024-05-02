@@ -7,6 +7,7 @@ import TriangleIcon from "@/components/Blog/icons/triangleIcon";
 import CircleIcon from "@/components/Blog/icons/circleIcon";
 import { getArticles } from "@/actions/getArticles";
 import { IBlogFilters } from "@/components/Blog/types";
+import AnimWrap from "@/components/ui/AnimWrap";
 
 interface Props {
   searchParams: { filter: IBlogFilters };
@@ -17,7 +18,7 @@ const Blog = async ({ searchParams }: Props) => {
 
   const showCards = articlesData && articlesData?.length > 0;
   return (
-    <main className={styles.blog}>
+    <AnimWrap className={styles.blog}>
       <section className={styles.blogSection}>
         <div className={styles.content}>
           <Filters currentFilter={searchParams.filter} />
@@ -43,7 +44,7 @@ const Blog = async ({ searchParams }: Props) => {
           <TriangleIcon className={styles.triangleIcon} />
         </>
       )}
-    </main>
+    </AnimWrap>
   );
 };
 

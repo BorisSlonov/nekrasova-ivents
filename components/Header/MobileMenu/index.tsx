@@ -20,7 +20,7 @@ const MobileMenu = ({ closeMenuHanlder, showMenu }: Props) => {
       })}
     >
       <div className={styles.header}>
-        <Link className={styles.logoLink} href={"/"}>
+        <Link onClick={closeMenuHanlder} className={styles.logoLink} href={"/"}>
           <LogoIcon />
         </Link>
         <button onClick={closeMenuHanlder} className={styles.closeBtn}>

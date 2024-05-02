@@ -27,6 +27,12 @@
   text-align: center;
   position: relative;
   z-index: 1;
+  transform: translateX(-200%);
+  transition: all .8s;
+}
+
+.titleWrap_active {
+  transform: translate(0);
 }
 
 .subTitle {
@@ -81,4 +87,15 @@
   .subTitle {
     font-size: 16px;
   }
+}
+
+
+
+.animeBigCircle {
+  transform: rotate(-180deg);
+  transition: transform 1.6s;
+}
+
+.animeBigCircle_active {
+  transform: rotate(0);
 }

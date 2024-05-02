@@ -1,3 +1,14 @@
+.instructionListWrapper {
+  max-width: 819px;
+  width: 100%;
+  transform: translateY(50%);
+  transition: transform .8s;
+}
+
+.instructionListWrapper_active {
+  transform: translate(0);
+}
+
 .instructionList {
   padding: 32px 32px 80px 32px;
   list-style: none;
@@ -5,8 +16,6 @@
   flex-direction: column;
   background: var(--white);
   border-radius: 32px 32px 0px 0px;
-  max-width: 819px;
-  width: 100%;
   gap: 24px;
 }
 
@@ -28,6 +37,7 @@
   height: 2px;
   background: var(--purple-light-4);
 }
+
 .number {
   font-size: 64px;
   text-transform: uppercase;
@@ -51,9 +61,11 @@
   .instructionList {
     padding: 32px 24px 40px 24px;
   }
+
   .textContent {
     gap: 24px;
   }
+
   .number {
     font-size: 48px;
     width: 60px;
@@ -68,6 +80,7 @@
   .textContent {
     gap: 16px;
   }
+
   .number {
     font-size: 32px;
     width: 40px;

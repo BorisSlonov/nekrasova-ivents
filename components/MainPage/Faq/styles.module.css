@@ -143,3 +143,12 @@
     flex-shrink: 1;
   }
 }
+
+.fadeInUp {
+  transform: translateY(50%);
+  transition: transform .8s;
+}
+
+.fadeInUp_active {
+  transform: translateY(0);
+}

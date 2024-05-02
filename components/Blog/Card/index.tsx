@@ -1,12 +1,12 @@
 import React from "react";
 import styles from "./styles.module.css";
-import Image from "next/image";
 import ArrowIcon from "./icons/arrowIcon";
 import CaterogyBage from "../CategoryBage";
 import DateBage from "../DateBage";
 import Link from "next/link";
 import { IArticle, IBlogFilters } from "../types";
 import { getImageSrc } from "@/utils/getImageSrc";
+import Image from "next/image";
 
 interface Props {
   cardData: IArticle;
@@ -36,7 +36,6 @@ const Card = ({ cardData, currentFilter }: Props) => {
 
           <div className={styles.textInfo}>{title}</div>
         </div>
-
         <Image
           className={styles.cardImage}
           width={397}
@@ -46,6 +45,7 @@ const Card = ({ cardData, currentFilter }: Props) => {
           src={getImageSrc(imgSrc)}
           priority
         />
+
         <div className={styles.linkBtn}>
           <ArrowIcon />
         </div>

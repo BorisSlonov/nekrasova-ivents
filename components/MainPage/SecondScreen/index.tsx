@@ -1,14 +1,21 @@
-import React from "react";
+"use client";
+
+import React, { useRef } from "react";
 import styles from "./styles.module.css";
 import CardList from "./CardList";
 import BigCircle from "@/components/ui/BigCircle";
+import { useInView } from "framer-motion";
+import cn from "classnames";
+
 
 const SecondScreen = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const isInView = useInView(containerRef, { once: true });
   return (
-    <section className={styles.secondScreen}>
+    <section ref={containerRef} className={styles.secondScreen}>
       <div className={styles.contentWrap}>
         <div className={styles.content}>
-          <div className={styles.titleWrap}>
+          <div className={cn(styles.titleWrap, { [styles.titleWrap_active]: isInView })} >
             <span className={styles.subTitle}>
               Full circle of payments products
             </span>
@@ -16,8 +23,7 @@ const SecondScreen = () => {
           </div>
           <CardList />
         </div>
-
-        <BigCircle />
+        <BigCircle className={cn(styles.animeBigCircle, { [styles.animeBigCircle_active]: isInView })} />
       </div>
     </section>
   );
