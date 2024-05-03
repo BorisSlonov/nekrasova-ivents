@@ -11,7 +11,7 @@ const Arrow = () => {
     >
       <path
         d="M12 28L28 12M28 12H16M28 12V24"
-        stroke="#5603A9"
+        stroke="#748e65"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"

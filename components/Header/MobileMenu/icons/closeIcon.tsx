@@ -14,12 +14,12 @@ const CloseIcon = () => {
         cy="27"
         r="24"
         fill="white"
-        stroke="#5603A9"
+        stroke="#748e65"
         strokeWidth="2"
       />
       <path
         d="M33 21L21 32.9999M20.9999 20.9999L32.9999 32.9999"
-        stroke="#5603A9"
+        stroke="#748e65"
         strokeWidth="2"
         strokeLinecap="round"
       />

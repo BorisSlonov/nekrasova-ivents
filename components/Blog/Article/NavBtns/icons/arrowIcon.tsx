@@ -11,7 +11,7 @@ const ArrowIcon = () => {
     >
       <path
         d="M18.4016 12H5.60156M5.60156 12L10.4016 7.20001M5.60156 12L10.4016 16.8"
-        stroke="#5603A9"
+        stroke="#748e65"
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"

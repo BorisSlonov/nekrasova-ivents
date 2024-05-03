@@ -29,20 +29,7 @@ const MobileMenu = ({ closeMenuHanlder, showMenu }: Props) => {
       </div>
       <LinksList closeMenuHanlder={closeMenuHanlder} />
 
-      <div className={styles.btnLinks}>
-        <Link
-          className={styles.joinLink}
-          href={"https://app.cryptopayments.com/cabinet/cregister"}
-        >
-          join now
-        </Link>
-        <Link
-          className={styles.loginLink}
-          href={"https://app.cryptopayments.com/cabinet/login"}
-        >
-          login
-        </Link>
-      </div>
+
     </div>
   );
 };

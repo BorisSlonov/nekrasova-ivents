@@ -11,7 +11,7 @@ const ArticleArrow = () => {
     >
       <path
         d="M1.60156 6.00001H14.4016M14.4016 6.00001L9.60156 1.20001M14.4016 6.00001L9.60156 10.8"
-        stroke="#5603A9"
+        stroke="#748e65"
         strokeWidth="1.5"
         strokeLinecap="round"
         strokeLinejoin="round"

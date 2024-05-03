@@ -17,55 +17,31 @@ const FirstScreen = () => {
   const isInView = useInView(containerRef, { once: true });
 
   return (
-    <SectionWrap className={styles.firstScreen}>
-      <div ref={containerRef} className={styles.content}>
-        <div className={styles.topContent}>
-          <h1
-            className={cn(styles.title, {
-              [styles.pcAnimTitle]: isInView,
-            })}
-          >
-            Crypto Payments for your{" "}
-            <span className={styles.business}>Business</span>
-          </h1>
-          <Image
-            width={400}
-            height={400}
-            sizes="100vw"
-            className={cn(styles.image, {
-              [styles.pcAnimImage]: isInView,
-            })}
-            src={"/mainPage/firstScreenCircles.png"}
-            alt="crypto payment ecosystem"
-            priority
-          />
-        </div>
-        <div
-          className={cn(styles.bottomContent, {
-            [styles.pcAnimBottomContent]: isInView,
-          })}
-        >
-          <div className={styles.startedContent}>
-            <StartedBtn className={styles.startedBtnWrap} />
-            <div className={styles.startedBtnBgWrap}>
-              <StartedBtnBg />
+    <SectionWrap className="section section_page1 section_index">
+      <div ref={containerRef} className="container">
+        <div className={styles.page1}>
+          <div className={styles.page1__body}>
+            <h1 className={cn('h1', { ['animated']: isInView })}>
+              ОФОРМЛЕНИЕ ЧАСТНЫХ/КОРПОРАТИВНЫХ МЕРОПРИЯТИЙ,
+              СВАДЕБНЫЙ ДЕКОР,
+              НОВОГОДНЕЕ ОФОРМЛЕНИЕ,
+              ФОТОЗОНЫ,
+              ШАРЫ
+            </h1>
+            <p className={cn(styles.page1__p, { ['animated']: isInView })}>
+              ВАШИ МЕЧТЫ - НАШЕ ВОПЛОЩЕНИЕ!
+            </p>
+            <div className={cn(styles.page1__btns, { ['animated']: isInView })}>
+              <a href="#" className="btn btn_fill">
+                Каталог
+              </a>
+              <a href="#" className="btn btn_stroke">
+                Связаться
+              </a>
             </div>
-          </div>
-          <div className={styles.bottomText}>
-            A simple solution to start accepting cryptocurrencies
           </div>
         </div>
       </div>
-      <Image
-        className={styles.bgImage}
-        width={0}
-        height={0}
-        sizes="100vw"
-        src={"/mainPage/mainPageFirstScreen.png"}
-        alt="bg"
-        unoptimized
-        priority
-      />
     </SectionWrap>
   );
 };

@@ -16,7 +16,7 @@ const Arrow = ({ className }: Props) => {
       <g clipPath="url(#clip0_2079_4620)">
         <path
           d="M2.3999 21.6004L21.5999 2.40039M21.5999 2.40039H7.1999M21.5999 2.40039V16.8004"
-          stroke="#5603A9"
+          stroke="#748e65"
           strokeWidth="3"
           strokeLinecap="round"
           strokeLinejoin="round"

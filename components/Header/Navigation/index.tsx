@@ -1,23 +1,24 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from "react";
+import { getMenuMain } from "@/actions/getMenu";
+
+interface MenuItem {
+  id: number;
+  attributes: {
+    title: string;
+    url: string;
+  };
+}
 
 const Navigation = () => {
-  const [menuItems, setMenuItems] = useState([]);
+  const [menuItems, setMenuItems] = useState<MenuItem[]>([]);
 
   useEffect(() => {
-    const fetchMenu = async () => {
-      try {
-        const response = await fetch('https://admin.decornekrasova.ru/api/menus/1?populate=*');
-        if (!response.ok) {
-          throw new Error('Failed to fetch menu');
-        }
-        const data = await response.json();
-        setMenuItems(data.data.attributes.items.data);
-      } catch (error) {
-        console.error('Error fetching menu:', error);
-      }
+    const getMenuData = async () => {
+      const data = await getMenuMain();
+      setMenuItems(data);
     };
 
-    fetchMenu();
+    getMenuData();
   }, []);
 
   return (
@@ -27,7 +28,7 @@ const Navigation = () => {
           <ul className="main-menu__list">
             {menuItems && menuItems.map((menuItem) => (
               <li key={menuItem.id} className="main-menu__li">
-                <a href={menuItem.attributes.url} className="header__link_shops">
+                <a href={menuItem.attributes.url} className="header__link">
                   {menuItem.attributes.title}
                 </a>
               </li>

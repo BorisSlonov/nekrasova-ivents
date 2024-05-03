@@ -14,7 +14,7 @@ const CheckedIcon = () => {
     >
       <path
         d="M4 17.2857L10.8571 24.1429L28 7"
-        stroke="#5603A9"
+        stroke="#748e65"
         strokeWidth="4"
         strokeLinecap="round"
         strokeLinejoin="round"

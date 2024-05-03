@@ -11,32 +11,7 @@ import AnimWrap from "@/components/ui/AnimWrap";
 export default function Home() {
   return (
     <AnimWrap className={styles.mainPage}>
-      <section className="section section_page1 section_index">
-        <div className="container">
-          <div className="page1">
-            <div className="page1__body">
-              <h1 className="h1">
-                ОФОРМЛЕНИЕ ЧАСТНЫХ/КОРПОРАТИВНЫХ МЕРОПРИЯТИЙ,
-                СВАДЕБНЫЙ ДЕКОР,
-                НОВОГОДНЕЕ ОФОРМЛЕНИЕ,
-                ФОТОЗОНЫ,
-                ШАРЫ
-              </h1>
-              <p className="page1__p">
-                ВАШИ МЕЧТЫ - НАШЕ ВОПЛОЩЕНИЕ!
-              </p>
-              <div className="page1__btns">
-                <a href="#" className="btn btn_fill">
-                  Каталог
-                </a>
-                <a href="#" className="btn btn_stroke">
-                  Связаться
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <FirstScreen />
       <section className="section section_advantages">
         <div className="advantages">
           <div className="container">
