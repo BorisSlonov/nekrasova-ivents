@@ -2,6 +2,12 @@
 
 import withPlaiceholder from "@plaiceholder/next";
 const nextConfig = {
+  experimental: {
+    optimizePackageImports: [
+      "framer-motion",
+      "swiper"
+    ]
+  },
   async headers() {
     return [
       {
@@ -23,7 +29,7 @@ const nextConfig = {
     remotePatterns: [
       {
         protocol: "https",
-        hostname: "admin.cryptopayments.com",
+        hostname: "admin.decornekrasova.ru",
       },
     ],
   },

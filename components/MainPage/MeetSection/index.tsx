@@ -6,6 +6,8 @@ import { getEvents } from "@/actions/getEvents";
 
 const MeetSection = async () => {
   const events = await getEvents();
+
+  
   const sortedEvents = events?.sort((a, b) => a.id - b.id);
 
   return (
