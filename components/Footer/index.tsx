@@ -22,7 +22,7 @@ const Footer = () => {
         <div className={styles.bottomContent}>
           <div className={styles.bottomTextWrap}>
             <span className={styles.bottomText}>
-              Cryptopayments is a brand name of Stellar LLC, Registry code: 2969
+              decornekrasova is a brand name of Stellar LLC, Registry code: 2969
               LLC 2023
             </span>
             <span className={styles.bottomText}>

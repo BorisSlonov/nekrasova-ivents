@@ -13,13 +13,13 @@ export const getContacts = async (): Promise<IContactData> => {
     return {
       id: 1,
       attributes: {
-        email: "support@cryptopayments.com",
+        email: "support@decornekrasova.com",
         Instagram:
           "https://www.instagram.com/crypto_payments?igsh=MXh6Y3EydXhwaDV2aA==",
-        telegram: "https://t.me/Cryptopayments_B2B",
+        telegram: "https://t.me/decornekrasova_B2B",
         facebook:
           "https://www.facebook.com/profile.php?id=61555951127771&mibextid=LQQJ4d",
-        LinkedIn: "https://www.linkedin.com/company/cryptopayments-com/",
+        LinkedIn: "https://www.linkedin.com/company/decornekrasova-com/",
       },
     };
   }

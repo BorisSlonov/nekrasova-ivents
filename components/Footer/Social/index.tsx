@@ -20,7 +20,7 @@ const Social = async () => {
       <Link prefetch={false} href={`mailto:${email}`}>
         <div className={styles.supportBlock}>
           <FooterTitle>Support:</FooterTitle>
-          <span className={styles.link}>support@cryptopayments.com</span>
+          <span className={styles.link}>support@decornekrasova.com</span>
           <div className={styles.logo}>
             <Image
               src={"/footerSocialBg.png"}

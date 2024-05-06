@@ -1,9 +1,9 @@
 export const config = [
   {
     title:
-      "What are the advantages of using Cryptopayments over other similar services?",
-    descr: `Focus on crypto businesses: Cryptopayments is specifically designed for crypto businesses, so it offers the features and services that these businesses need.    
-    Deep crypto liquidity: Cryptopayments gives you access to deep crypto liquidity, so you can easily buy and sell cryptocurrencies at competitive prices.
+      "What are the advantages of using decornekrasova over other similar services?",
+    descr: `Focus on crypto businesses: decornekrasova is specifically designed for crypto businesses, so it offers the features and services that these businesses need.    
+    Deep crypto liquidity: decornekrasova gives you access to deep crypto liquidity, so you can easily buy and sell cryptocurrencies at competitive prices.
     `,
   },
   {
@@ -11,8 +11,8 @@ export const config = [
     descr: `Signup takes less than 10 minutes. If the documents are in place, the account will get approved within 24 hours.`,
   },
   {
-    title: "What are the requirements to open a Cryptopayments account?",
-    descr: `To open a Cryptopayments account, you will need to provide the following information: your company's official formation documents; the government ID of the person who will be authorized to sign on behalf of the company. 
+    title: "What are the requirements to open a decornekrasova account?",
+    descr: `To open a decornekrasova account, you will need to provide the following information: your company's official formation documents; the government ID of the person who will be authorized to sign on behalf of the company. 
       `,
   },
   {

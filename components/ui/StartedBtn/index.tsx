@@ -17,7 +17,7 @@ const StartedBtn = ({ className, children, arrowBtnSize }: Props) => {
     <div className={cn(styles.startedBtnWrap, className)}>
       <Link
         className={cn(styles.startedBtn, styles.animate)}
-        href={"https://app.cryptopayments.com/cabinet/login"}
+        href={"https://app.decornekrasova.com/cabinet/login"}
       >
         {children ? children : "get started"}
       </Link>
