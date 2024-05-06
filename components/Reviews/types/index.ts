@@ -1,4 +1,4 @@
-interface IReview {
+export interface IReview {
   id: number;
   img: {
     url: string;
@@ -7,7 +7,8 @@ interface IReview {
   text: string;
 }
 
-interface IReviews {
+export interface IReviews {
   dataSlider: IReview[];
   domain: string;
+  imgSrc?: string
 }

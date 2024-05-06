@@ -15,10 +15,10 @@ import 'swiper/css/pagination';
 
 const ReviewsSlider = ({ dataSlider, domain }: IReviews) => {
     const containerRef = useRef<HTMLDivElement>(null);
-    const isInView = useInView(containerRef, { once: true });
+    const isInView = useInView(containerRef, { once: true, amount: 0.5 });
     return (
-        <section className="section">
-            <div ref={containerRef} className={cn('fadeInUp', { ['fadeInUp_active']: isInView })}>
+        <section ref={containerRef} className="section">
+            <div className={cn('fadeInUp', { ['fadeInUp_active']: isInView })}>
                 <div className="container">
                     <h2 className={cn('h2', { ['animated']: isInView })}>Отзывы</h2>
                     <Swiper
@@ -37,7 +37,7 @@ const ReviewsSlider = ({ dataSlider, domain }: IReviews) => {
                             }
                         }}
                     >
-                        {dataSlider.map((review: IReview, index: number) => (
+                        {dataSlider && dataSlider.map((review: IReview, index: number) => (
                             <SwiperSlide key={index}>
                                 <ReviewsCard dataSlider={review} imgSrc={domain + review.img.url} />
                             </SwiperSlide>
