@@ -2,10 +2,14 @@ import React from "react";
 import Image from "next/image";
 import styles from "./styles.module.css"
 import Link from "next/link";
-import { ICategoriesCard } from "../types";
+import { ICategories } from "../types";
 
 
-const CategoriesCard = ({ title, text, slug, imgSrc }: ICategoriesCard) => {
+const CategoriesCard = ({ dataCategories, imgSrc }: ICategories) => {
+
+    const { slug, title, text } = dataCategories
+
+
     return (
         <div className={styles.card}>
             <Image
@@ -23,5 +27,6 @@ const CategoriesCard = ({ title, text, slug, imgSrc }: ICategoriesCard) => {
             <Link className={styles.link} href={slug}>Перейти</Link>
         </div>
     );
-};
+}
+
 export default CategoriesCard;

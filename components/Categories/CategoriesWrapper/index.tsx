@@ -1,4 +1,5 @@
 'use client'
+
 import React, { useRef } from "react";
 import { useInView } from "framer-motion";
 import cn from "classnames";
@@ -16,8 +17,16 @@ const CategoriesWrapper = ({ dataCategories, domain }: any) => {
                 <div className="container">
                     <h2 className={cn('h2', { ['animated']: isInView })}>Категории</h2>
                     <div className={styles.body}>
-                        {dataCategories.map((review: ICategoriesCard, index: number) => (
-                            <CategoriesCard key={index} className={styles.item} dataCategories={review} imgSrc={domain + review.catalogCard.url} />
+                        {dataCategories && dataCategories.map((item: ICategoriesCard, index: number) => (
+                            <CategoriesCard
+                                key={index}
+                                title={item.title}
+                                text={item.text}
+                                slug={item.slug}
+                                imgSrc={domain + item.catalogCard.url}
+                                catalogCard={{
+                                    url: item.catalogCard.url
+                                }} />
                         ))}
                     </div>
                 </div>
@@ -25,5 +34,4 @@ const CategoriesWrapper = ({ dataCategories, domain }: any) => {
         </section>
     );
 };
-
 export default CategoriesWrapper;
