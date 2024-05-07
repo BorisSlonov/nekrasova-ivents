@@ -1,16 +1,16 @@
-import React from "react";
-import { getCategories } from "@/actions/getCategories";
-import LastFormWrapper from "./LastFormWrapper";
+// import React from "react";
+// import { getCategories } from "@/actions/getCategories";
+// import LastFormWrapper from "./LastFormWrapper";
 
-const Categories = async () => {
+// const Categories = async () => {
 
-    const data = await getCategories();
-    const domain = process.env.CMS_URL || '';
-    const dataCategories = { dataCategories: data, domain: domain };
+//     const data = await getCategories();
+//     const domain = process.env.CMS_URL || '';
+//     const dataCategories = { dataCategories: data, domain: domain };
 
-    return (
-        <LastFormWrapper {...dataCategories} />
-    );
-}
+//     return (
+//         <LastFormWrapper {...dataCategories} />
+//     );
+// }
 
-export default Categories;
+// export default Categories;
