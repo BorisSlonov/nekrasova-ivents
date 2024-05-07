@@ -1,10 +1,11 @@
 'use client'
+
 import React, { useRef } from "react";
 import { useInView } from "framer-motion";
 import cn from "classnames";
 import { Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { IReview, IReviews } from "../types";
+import { IReview, IReviewsSlider } from "../types";
 import ReviewsCard from "../ReviewsCard";
 import styles from "./styles.module.css"
 
@@ -13,7 +14,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 
 
-const ReviewsSlider = ({ dataSlider, domain }: IReviews) => {
+const ReviewsSlider = ({ dataSlider, domain }: IReviewsSlider) => {
     const containerRef = useRef<HTMLDivElement>(null);
     const isInView = useInView(containerRef, { once: true, amount: 0.5 });
     return (
@@ -37,9 +38,19 @@ const ReviewsSlider = ({ dataSlider, domain }: IReviews) => {
                             }
                         }}
                     >
-                        {dataSlider && dataSlider.map((review: IReview, index: number) => (
+                        {dataSlider && dataSlider.map((item: IReview, index: number) => (
                             <SwiperSlide key={index}>
-                                <ReviewsCard dataSlider={review} imgSrc={domain + review.img.url} />
+                                <ReviewsCard
+                                    key={index}
+                                    name={item.name}
+                                    text={item.text}
+                                    imgSrc={domain + item.img.url}
+                                    title={""}
+                                    slug={""}
+                                    id={0}
+                                    img={{
+                                        url: ""
+                                    }} />
                             </SwiperSlide>
                         ))}
                     </Swiper>

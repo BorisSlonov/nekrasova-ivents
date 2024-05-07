@@ -8,7 +8,3 @@ export interface ICategoriesCard {
     url: string;
   }
 }
-
-export interface ICategories {
-  CategoriesCard: ICategoriesCard;
-}

@@ -1,14 +1,18 @@
 export interface IReview {
+  title: string;
+  slug: string;
   id: number;
+  imgSrc: string,
+  name: string;
+  text: string;
   img: {
     url: string;
   };
-  name: string;
-  text: string;
+
 }
 
-export interface IReviews {
+export interface IReviewsSlider {
   dataSlider: IReview[];
   domain: string;
-  imgSrc?: string
+  imgSrc?: string;
 }

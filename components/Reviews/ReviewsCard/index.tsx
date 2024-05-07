@@ -1,12 +1,10 @@
 import React from "react";
 import Image from "next/image";
 import styles from "./styles.module.css"
-import { IReviews } from "../types";
+import { IReview } from "../types";
 
 
-const ReviewsCard = ({ dataSlider, imgSrc }: IReviews) => {
-
-    const { name, text } = dataSlider
+const ReviewsCard = ({ name, text, imgSrc }: IReview) => {
 
 
     return (
