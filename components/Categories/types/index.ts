@@ -1,4 +1,4 @@
-interface ICategoriesCardFormat {
+export interface ICategoriesCardFormat {
   ext: string;
   url: string;
   hash: string;
@@ -11,13 +11,16 @@ interface ICategoriesCardFormat {
   sizeInBytes: number;
 }
 
-interface ICategoriesCard {
+export interface ICategoriesCard {
   id: number;
   name: string;
   alternativeText: null | string;
   caption: null | string;
   width: number;
   height: number;
+  catalogCard: {
+    url: string
+  },
   formats: {
     large: ICategoriesCardFormat;
     small: ICategoriesCardFormat;
@@ -36,7 +39,7 @@ interface ICategoriesCard {
   updatedAt: string;
 }
 
-interface ICatrgories {
+export interface ICatrgories {
   id: number;
   createdAt: string;
   updatedAt: string;

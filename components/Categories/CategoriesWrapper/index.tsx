@@ -7,7 +7,7 @@ import CategoriesCard from "../CategoriesCard";
 import styles from "./styles.module.css"
 
 
-const CategoriesWrapper = ({ dataCategories, domain }: ICategoriesCard) => {
+const CategoriesWrapper = ({ dataCategories, domain }: any) => {
     const containerRef = useRef<HTMLDivElement>(null);
     const isInView = useInView(containerRef, { once: true });
     return (
