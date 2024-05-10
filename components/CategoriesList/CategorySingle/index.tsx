@@ -3,13 +3,13 @@ import React, { useRef } from "react";
 import cn from "classnames";
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
-import { ICategoryCard } from "../types";
+import { ICategoriesCard } from "../types";
 import { getImageSrc } from "@/utils/getImageSrc";
 import { useInView } from "framer-motion";
 import styles from "./styles.module.css"
 
 interface Props {
-  categoryData: ICategoryCard[];
+  categoryData: ICategoriesCard[];
 }
 
 const CategorySingle = ({ categoryData }: Props) => {
