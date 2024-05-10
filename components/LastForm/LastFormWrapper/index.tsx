@@ -3,7 +3,6 @@ import React, { useRef } from "react";
 import { useInView } from "framer-motion";
 import cn from "classnames";
 import { ICategoriesCard } from "../types";
-import CategoriesCard from "../LastForm";
 import styles from "./styles.module.css"
 
 
