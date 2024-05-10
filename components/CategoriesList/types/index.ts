@@ -1,15 +1,17 @@
 export interface ICategoryCard {
-  img: any;
+  img: {
+    id: number;
+    url: string;
+  }[];
   id: number;
   title: string;
   text?: string;
   subtitle?: string;
   price: string;
   slug: string;
-
   catalogCard: {
     url: string;
-  }
+  };
 }
 
 export interface ICategoriesCard {
@@ -18,13 +20,12 @@ export interface ICategoriesCard {
   title: string;
   text?: string;
   slug: string;
-
   catalogCard: {
     url: string;
-  }
+  };
 }
 
 export interface ICategories {
   domain: string;
-  dataCategories: [];
+  dataCategories: ICategoryCard[];
 }

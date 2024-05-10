@@ -67,12 +67,10 @@
   font-size: 16px;
   font-weight: 600;
   color: #fff;
-  text-transform: uppercase;
 }
 
 .joinLink:hover {
-  background: var(--purple-light-1);
-  border-color: transparent;
+  opacity: .8;
 }
 
 .mobileMenuBtn {

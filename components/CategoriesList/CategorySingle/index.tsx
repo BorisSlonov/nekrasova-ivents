@@ -9,10 +9,10 @@ import styles from "./styles.module.css"
 
 interface Props {
   categoryData: ICategoryCard[];
+
 }
 
 const CategorySingle = ({ categoryData }: Props) => {
-
   const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, { once: true });
   const domain = process.env.CMS_URL || '';
@@ -23,7 +23,7 @@ const CategorySingle = ({ categoryData }: Props) => {
           <h1 className={cn('fadeInUp h1NotMain', { ['fadeInUp_active']: isInView })}>Наши услуги</h1>
           <div className={styles.body}>
             {categoryData.map((category) => (
-              <div className={styles.card}>
+              <div key={category.id} className={styles.card}>
                 <div key={category.id}>
                   <Image
                     className={styles.img}
@@ -37,7 +37,7 @@ const CategorySingle = ({ categoryData }: Props) => {
                   />
                   <h3 className={styles.title}>{category.title}</h3>
                   <ReactMarkdown className={styles.text}>{category.text}</ReactMarkdown>
-                  <p>{category.price}</p>
+                  <p className={styles.price}>{category.price}</p>
                 </div>
               </div>
             ))}

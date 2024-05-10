@@ -8,11 +8,10 @@
   color: var(--black);
   font-size: 18px;
   font-weight: 500;
-  text-transform: uppercase;
 }
 
 .navLink:hover {
-  color: var(--purple-main);
+  opacity: .8;
 }
 
 @media (max-width: 1024px) {
