@@ -19,7 +19,7 @@ const ReviewsSlider = ({ dataSlider, domain }: IReviewsSlider) => {
     const isInView = useInView(containerRef, { once: true, amount: 0.5 });
     return (
         <section ref={containerRef} className="section">
-            <div className={cn('fadeInUp', { ['fadeInUp_active']: isInView })}>
+            <div>
                 <div className="container">
                     <h2 className={cn('h2', { ['animated']: isInView })}>Отзывы</h2>
                     <Swiper
@@ -27,6 +27,7 @@ const ReviewsSlider = ({ dataSlider, domain }: IReviewsSlider) => {
                         modules={[Navigation, Pagination]}
                         spaceBetween={30}
                         slidesPerView={1}
+                        autoHeight={true}
                         navigation
                         pagination
                         breakpoints={{

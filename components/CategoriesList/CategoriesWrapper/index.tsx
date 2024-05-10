@@ -3,12 +3,12 @@
 import React, { useRef } from "react";
 import { useInView } from "framer-motion";
 import cn from "classnames";
-import { ICategoriesCard } from "../types";
+import { ICategoriesCard, ICategories } from "../types";
 import CategoriesCard from "../CategoriesCard";
 import styles from "./styles.module.css"
 
 
-const CategoriesWrapper = ({ dataCategories, domain }: any) => {
+const CategoriesWrapper = ({ dataCategories, domain }: ICategories) => {
     const containerRef = useRef<HTMLDivElement>(null);
     const isInView = useInView(containerRef, { once: true });
     return (

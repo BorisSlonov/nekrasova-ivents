@@ -1,14 +1,12 @@
 import type { Metadata } from "next";
-import { Inter_Tight } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const interTight = Inter_Tight({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "decornekrasova",
-  description: "decornekrasova",
+  title: "Декор Некрасова",
+  description: "Организация мероприятий",
 };
 
 export default function RootLayout({
@@ -25,11 +23,10 @@ export default function RootLayout({
           flexDirection: "column",
           position: "relative",
         }}
-        className={interTight.className}
       >
         <Header />
         {children}
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );

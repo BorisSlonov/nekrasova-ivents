@@ -9,6 +9,8 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@fontsource/montserrat": "^5.0.18",
+    "@fontsource/open-sans": "^5.0.28",
     "@plaiceholder/next": "^3.0.0",
     "classnames": "^2.5.1",
     "dayjs": "^1.11.10",

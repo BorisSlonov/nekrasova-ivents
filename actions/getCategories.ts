@@ -1,6 +1,11 @@
+import { getCategoriesUrl } from "@/components/Blog/utils/getCategoriesUrl";
+
 export const getCategories = async () => {
+    const url = getCategoriesUrl();
     try {
-        const response = await fetch('https://admin.decornekrasova.ru/api/categories/?populate=*');
+        const response = await fetch(`${process.env.API_URL}categories/?populate=*`, {
+            next: { revalidate: 60 },
+        });
         if (!response.ok) {
             throw new Error('Failed to fetch reviews');
         }

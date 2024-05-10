@@ -33,7 +33,7 @@ const FirstScreen = () => {
             </p>
             <div className={cn(styles.page1__btns, { ['animated']: isInView })}>
               <a href="#" className="btn btn_fill">
-                Каталог
+                Категории
               </a>
               <a href="#" className="btn btn_stroke">
                 Связаться

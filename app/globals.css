@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -37,6 +39,10 @@ a {
   text-decoration: none;
 }
 
+main {
+  width: 100%;
+}
+
 .hideScroll {
   -ms-overflow-style: none;
   scrollbar-width: none;
@@ -44,25 +50,6 @@ a {
 
 .hideScroll::-webkit-scrollbar {
   display: none;
-}
-
-:root {
-  --white-50: rgba(252, 250, 255, 0.5);
-  --white-30: rgba(252, 250, 255, 0.3);
-  --white-10: rgba(255, 255, 255, 0.1);
-  --white: #fcfaff;
-  --purple-main: #748e65;
-  --black: #1d1d1b;
-  --gray: #b2b2b2;
-  --yellow: #f8e32b;
-  --absolut-white: #fff;
-  --purple-light-1: #7835ba;
-  --purple-light-2: #9a68cb;
-  --purple-light-3: #bb9add;
-  --purple-light-4: #ddcdee;
-  --black-light-1: #4a4a49;
-  --black-light-2: #777776;
-  --black-light-4: #d2d2d1;
 }
 
 [data-theme="dark"] {
@@ -154,6 +141,11 @@ a {
   text-decoration: none;
 }
 
+.h1NotMain {
+  text-align: center;
+  margin: 60px 0 40px;
+}
+
 .bold {
   font-weight: 500;
 }
@@ -175,6 +167,16 @@ a {
 .section {
   position: relative;
   padding: 70px 0;
+}
+
+.section_first {
+  padding-top: 150px;
+}
+
+@media(max-width:767px) {
+  .section_first {
+    padding-top: 75px;
+  }
 }
 
 .section_page1 {
@@ -830,11 +832,6 @@ a {
   border-top-right-radius: 0;
 }
 
-.hoverOpen__list_shops {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-}
-
 .hoverOpen__list_time {
   display: grid;
   grid-template-columns: 1fr;
@@ -846,7 +843,10 @@ a {
 }
 
 .hoverOpen__a {
-  display: block;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
   padding: 24px;
   padding-left: 48px;
   width: 100%;
@@ -1465,8 +1465,13 @@ a {
 }
 
 .hoverOpen__list_shops {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.hoverOpen__li {
+  flex-basis: calc(25% - 10px);
 }
 
 .hoverOpen__list_time {
@@ -1479,14 +1484,6 @@ a {
   width: 100%;
 }
 
-.hoverOpen__a {
-  display: block;
-  padding: 24px;
-  padding-left: 48px;
-  width: 100%;
-  transition: all 0.3s;
-  color: var(--green);
-}
 
 .hoverOpen__a:hover {
   background-color: rgba(245, 247, 250, 1);
@@ -2010,3 +2007,22 @@ a {
 }
 
 /* footer */
+
+
+
+
+
+.t-sociallinks__wrapper {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+.t-sociallinks__wrapper a {
+  display: block;
+  transition: all .3s;
+}
+
+.t-sociallinks__wrapper a:hover {
+  opacity: .8;
+}

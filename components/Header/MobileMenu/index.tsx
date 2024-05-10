@@ -29,7 +29,14 @@ const MobileMenu = ({ closeMenuHanlder, showMenu }: Props) => {
       </div>
       <LinksList closeMenuHanlder={closeMenuHanlder} />
 
-
+      <div className={styles.btnLinks}>
+        <Link
+          className={styles.joinLink}
+          href={"tel:+7(952)184-90-96"}
+        >
+          +7(952)184-90-96
+        </Link>
+      </div>
     </div>
   );
 };

@@ -2,7 +2,7 @@ import React from "react";
 import { getCategories } from "@/actions/getCategories";
 import CategoriesWrapper from "./CategoriesWrapper";
 
-const Categories = async () => {
+const CategoriesList = async () => {
 
     const data = await getCategories();
     const domain = process.env.CMS_URL || '';
@@ -13,4 +13,4 @@ const Categories = async () => {
     );
 }
 
-export default Categories;
+export default CategoriesList;

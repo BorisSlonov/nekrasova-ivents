@@ -11,18 +11,20 @@ const Promo = () => {
     const containerRef = useRef<HTMLDivElement>(null);
     const isInView = useInView(containerRef, { once: true });
     return (
-        <section className="section section_promo">
-            <LogoIcon className={styles.logo} />
-            <div className="promo">
-                <div className="container">
-                    <div className="promo__body">
-                        <p className="promo__p">
-                            Мы создаем не только воздушное настроение, но декор для важных событий. Наша работа
-                            сочетает в себе материалы высочайшего класса, ручную работу и любовь создателей.
-                            <a href="#" className="promo__btn btn btn_fill">
-                                Оставить заявку
-                            </a>
-                        </p>
+        <section ref={containerRef} className="section section_promo">
+            <div>
+                <LogoIcon className={cn(styles.logo, { [styles.logo_active]: isInView })} />
+                <div className="promo">
+                    <div className="container">
+                        <div className="promo__body">
+                            <p className="promo__p">
+                                Мы создаем не только воздушное настроение, но декор для важных событий. Наша работа
+                                сочетает в себе материалы высочайшего класса, ручную работу и любовь создателей.
+                                <a href="#" className="promo__btn btn btn_fill">
+                                    Оставить заявку
+                                </a>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>

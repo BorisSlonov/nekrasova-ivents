@@ -1,0 +1,106 @@
+.blog {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1920px;
+  padding-top: 160px;
+  background: var(--white);
+  flex-grow: 1;
+  overflow: hidden;
+}
+
+.blogSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 100px;
+  padding-right: 100px;
+  position: relative;
+}
+
+.content {
+  max-width: 1240px;
+  width: 100%;
+  position: relative;
+}
+
+.cardList {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-top: 56px;
+  padding-bottom: 100px;
+  border-bottom: 2px solid var(--black-light-4);
+  position: relative;
+  z-index: 1;
+}
+
+.gearIcon {
+  position: absolute;
+  left: 0;
+  top: 218px;
+}
+
+.triangleIcon {
+  position: absolute;
+  right: 45px;
+  top: 53%;
+}
+
+.circleIcon {
+  position: absolute;
+  bottom: 40px;
+  left: 350px;
+}
+
+@media (max-width: 1280px) {
+  .blogSection {
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .blogSection {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  .cardList {
+    padding-bottom: 60px;
+  }
+}
+
+@media (max-width: 640px) {
+  .blog {
+    padding-top: 168px;
+  }
+
+  .blogSection {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+
+  .cardList {
+    padding-bottom: 56px;
+    margin-top: 32px;
+  }
+}
+
+@media (max-width: 552px) {
+  .blog {
+    padding-top: 126px;
+  }
+
+  .cardList {
+    padding-bottom: 48px;
+    margin-top: 24px;
+  }
+
+  .blogSection {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+}

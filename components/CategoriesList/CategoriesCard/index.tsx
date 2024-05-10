@@ -20,7 +20,7 @@ const CategoriesCard = ({ title, text, slug, imgSrc }: ICategoriesCard) => {
             />
             <h3 className={styles.name}>{title}</h3>
             <div className={styles.text}>{text}</div>
-            <Link className={styles.link} href={slug}>Перейти</Link>
+            <Link className={styles.link} href={`/categories/${slug}`}>Перейти</Link>
         </div>
     );
 };
