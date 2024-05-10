@@ -7,7 +7,7 @@ const Achievs = () => {
     const containerRef = useRef<HTMLDivElement>(null);
     const isInView = useInView(containerRef, { once: true });
     return (
-        <div ref={containerRef}>
+        <div id="achives" ref={containerRef}>
             <section className="section section_advantages">
                 <div className={cn('advantages fadeInUp', { ['fadeInUp_active']: isInView })}>
                     <div className="container">
