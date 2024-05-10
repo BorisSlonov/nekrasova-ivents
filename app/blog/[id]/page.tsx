@@ -20,8 +20,6 @@ const ArticlePage = async ({ params, searchParams }: Props) => {
   const { id } = params
   const articleData = await getArticle(id);
 
-  console.log(id)
-
   if (!articleData) {
     redirect("/");
   }

@@ -69,6 +69,10 @@ main {
 
 }
 
+.otherWrapper {
+  width: 100%;
+  margin-top: 150px;
+}
 
 .open-sans-400 {
   font-family: "Open Sans", sans-serif;
@@ -181,6 +185,7 @@ a {
 .section_index {
   position: relative;
 }
+
 
 .section_index::before {
   content: '';

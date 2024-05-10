@@ -1,4 +1,5 @@
 export interface ICategoryCard {
+  goods: string[];
   img: {
     id: number;
     url: string;
@@ -12,20 +13,4 @@ export interface ICategoryCard {
   catalogCard: {
     url: string;
   };
-}
-
-export interface ICategoriesCard {
-  key: number;
-  imgSrc: string;
-  title: string;
-  text?: string;
-  slug: string;
-  catalogCard: {
-    url: string;
-  };
-}
-
-export interface ICategories {
-  domain: string;
-  dataCategories: ICategoryCard[];
 }

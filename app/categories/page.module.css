@@ -23,6 +23,7 @@
   max-width: 1240px;
   width: 100%;
   position: relative;
+  margin: 0 auto;
 }
 
 .cardList {
