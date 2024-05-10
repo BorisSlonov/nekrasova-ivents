@@ -15,7 +15,6 @@ const LastFormWrapper = () => {
                 <div className="container">
                     <div className="contactForm__body">
                         <div className="contactForm__item">
-                            <img src="img/logo_light.svg" alt="" className="contactForm__logo" />
 
                             <Form />
 
