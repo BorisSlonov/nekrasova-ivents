@@ -173,12 +173,6 @@ a {
   padding-top: 150px;
 }
 
-@media(max-width:767px) {
-  .section_first {
-    padding-top: 75px;
-  }
-}
-
 .section_page1 {
   padding-top: 75px;
   padding-bottom: 75px;
@@ -261,9 +255,17 @@ a {
   background-attachment: fixed;
 }
 
+.section_first {
+  padding-top: 100px;
+}
+
 @media(max-width:767px) {
   .section {
     padding: 40px 0;
+  }
+
+  .section_first {
+    padding-top: 100px;
   }
 
   .section_index {

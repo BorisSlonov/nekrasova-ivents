@@ -3,7 +3,7 @@
   top: 0;
   right: 0;
   width: 661px;
-  background: var(--white);
+  background: #fff;
   padding: 40px 40px 60px 40px;
   height: 105dvh;
   flex-direction: column;

@@ -13,7 +13,7 @@ const CategoriesWrapper = ({ dataCategories, domain }: ICategories) => {
     const isInView = useInView(containerRef, { once: true });
     return (
         <section className="section">
-            <div ref={containerRef} className={cn('fadeInUp', { ['fadeInUp_active']: isInView })}>
+            <div ref={containerRef}>
                 <div className="container">
                     <h2 className={cn('h2', { ['animated']: isInView })}>Категории</h2>
                     <div className={styles.body}>

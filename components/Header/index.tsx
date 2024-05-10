@@ -29,7 +29,6 @@ const Header = () => {
           <div className={styles.headerContent}>
             <Link className={styles.logoLink} href={"/"}>
               <LogoIcon className={styles.logo} />
-              <MobileLogo className={styles.mobileLogo} />
             </Link>
             <Navigation />
 
