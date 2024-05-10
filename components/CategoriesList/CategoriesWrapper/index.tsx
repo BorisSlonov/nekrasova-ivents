@@ -17,7 +17,7 @@ const CategoriesWrapper = ({ dataCategories, domain }: ICategories) => {
                 <div className="container">
                     <h2 className={cn('h2', { ['animated']: isInView })}>Категории</h2>
                     <div className={styles.body}>
-                        {dataCategories && dataCategories.map((item: any, index: number) => (
+                        {dataCategories && dataCategories.map((item: ICategoriesCard, index: number) => (
                             <CategoriesCard
                                 key={index}
                                 title={item.title}
@@ -26,7 +26,7 @@ const CategoriesWrapper = ({ dataCategories, domain }: ICategories) => {
                                 imgSrc={domain + item.catalogCard.url}
                                 catalogCard={{
                                     url: item.catalogCard.url
-                                }} />
+                                }} goods={""} img={[]} id={0} price={""} />
                         ))}
                     </div>
                 </div>
