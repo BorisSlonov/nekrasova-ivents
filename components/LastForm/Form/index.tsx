@@ -15,10 +15,11 @@ const Form = () => {
         };
 
         try {
-            const response = await fetch("https://decornekrasova.ru/free-mail-sender/send-email", {
+            const response = await fetch("https://admin.decornekrasova.ru/free-mail-sender/send-email   ", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
+                    "Bearer-Token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzE1MzMzODY4LCJleHAiOjE3MTc5MjU4Njh9.DhGoFVuuuNxMto7crHF7PeM62dufzhIjQe2eTzyxlJQ"
                 },
                 body: JSON.stringify(formData),
             });
