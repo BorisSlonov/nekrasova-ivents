@@ -9,9 +9,12 @@ const Form = () => {
         e.preventDefault();
 
         const formData = {
-            toEmail: 'sslonovborisss@gmail.com',
-            subject: name,
-            mailText: msg,
+            toEmail: [
+                "yes.wedding.tomsk@yandex.ru",
+                "sslonovborisss@gmail.com",
+            ],
+            subject: "Заявка с сайта decornekrasova",
+            mailText: "Телефон:" + tel + " Имя:" + name + " Сообщение:" + msg,
         };
 
         try {
@@ -25,7 +28,7 @@ const Form = () => {
             });
 
             if (response.ok) {
-                console.log("Email sent successfully");
+                alert("Спасибо за заявку! Мы Свяжемся с вами в ближайшее время");
             } else {
                 throw new Error("Failed to send email");
             }
