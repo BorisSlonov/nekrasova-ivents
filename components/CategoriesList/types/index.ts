@@ -1,4 +1,5 @@
 export interface ICategoriesCard {
+  imgSrc: string;
   goods: string[];
   img: {
     id: number;
