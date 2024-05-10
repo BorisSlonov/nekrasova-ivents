@@ -1,12 +1,14 @@
 export interface ICategoriesCard {
   imgSrc: string;
-  goods: string[];
+  goods: {
+    title: string
+  }[];
   img: {
     id: number;
     url: string;
   }[];
   id: number;
-  title: string;
+  title?: string;
   text?: string;
   subtitle?: string;
   price: string;
