@@ -4,7 +4,6 @@ import AnimWrap from "@/components/ui/AnimWrap";
 import CategorySingle from "@/components/CategoriesList/CategorySingle";
 import { redirect } from "next/navigation";
 import { getCategory } from "@/actions/getCategory";
-import { ICategoryCard } from "@/components/CategoriesList/types";
 import Reviews from "@/components/Reviews";
 import LastForm from "@/components/LastForm";
 
@@ -17,11 +16,12 @@ interface Props {
 }
 
 const Category = async ({ params }: Props) => {
-  const categoryData: any = await getCategory(params.id);
+  const { slug } = params;
+  const categoryData: any = await getCategory(slug);
 
-  if (!categoryData) {
-    redirect("/categories");
-  }
+  // if (!categoryData) {
+  //   redirect("/categories");
+  // }
 
   return (
     <AnimWrap className={styles.blog}>

@@ -16,7 +16,11 @@ interface Props {
 }
 
 const ArticlePage = async ({ params, searchParams }: Props) => {
-  const articleData = await getArticle(params.id);
+
+  const { id } = params
+  const articleData = await getArticle(id);
+
+  console.log(id)
 
   if (!articleData) {
     redirect("/");

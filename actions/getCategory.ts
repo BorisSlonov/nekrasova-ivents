@@ -2,9 +2,10 @@ import { ICategoriesCard } from "@/components/CategoriesList/types";
 
 export const getCategory = async (slug: string): Promise<ICategoriesCard | undefined> => {
   try {
-    const result = await fetch(`${process.env.API_URL}goods/?populate=*`, {
-      next: { revalidate: 60 },
+    const result = await fetch(`${process.env.API_URL}goods/?populate=*&filters[goods][slug]=${slug}`, {
+      cache: "no-store",
     });
+
 
     const category = await result.json();
 
@@ -13,6 +14,3 @@ export const getCategory = async (slug: string): Promise<ICategoriesCard | undef
     return;
   }
 };
-
-// ссылка чтобы получить все товары внути категории
-// https://admin.decornekrasova.ru/api/categories/?slug=kapriz?populate=*

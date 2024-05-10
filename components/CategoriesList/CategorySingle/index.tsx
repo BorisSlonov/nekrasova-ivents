@@ -16,7 +16,7 @@ interface Props {
 const CategorySingle = ({ categoryData }: Props) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, { once: true });
-  const domain = process.env.CMS_URL || '';
+  // const domain = process.env.CMS_URL || '' картинки подгужаются после первой перезагрузки страницы;
   return (
     <section className="section section_first">
       <div ref={containerRef}>
