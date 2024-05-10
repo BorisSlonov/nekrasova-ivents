@@ -4,23 +4,21 @@ import { useInView } from "framer-motion";
 import cn from "classnames";
 import { ICategoriesCard } from "../types";
 import styles from "./styles.module.css"
+import Form from "../Form";
 
 
 
 const LastFormWrapper = () => {
     return (
-        <section className="section section_last">
+        <section id="form" className="section section_last">
             <div className="contactForm">
                 <div className="container">
                     <div className="contactForm__body">
                         <div className="contactForm__item">
                             <img src="img/logo_light.svg" alt="" className="contactForm__logo" />
-                            <form className="form" action="#">
-                                <input className="form__input" type="tel" name="tel" placeholder="Номер телефона" />
-                                <input className="form__input" type="text" name="name" placeholder="Имя" />
-                                <textarea name="msg" className="form__textarea" placeholder="Сообщение"></textarea>
-                                <button className="btn btn_fill">Отправить</button>
-                            </form>
+
+                            <Form />
+
                         </div>
                         <div className="contactForm__item">
                             <div className="contacts">
