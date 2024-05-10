@@ -15,3 +15,8 @@ export interface ICategoriesCard {
     url: string;
   };
 }
+
+export interface ICategories {
+  dataCategories: ICategoriesCard[];
+  domain: string;
+}
