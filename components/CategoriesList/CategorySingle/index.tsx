@@ -33,7 +33,7 @@ const CategorySingle = ({ categoryData }: Props) => {
                       alt={"Услуга"}
                       width={300}
                       height={380}
-                      src={domain + category.img[0].url}
+                      src={'https://admin.decornekrasova.ru' + category.img[0].url}
                       sizes="100vw"
                       priority
                     />
