@@ -15,7 +15,7 @@ const Form = () => {
         };
 
         try {
-            const response = await fetch("https://admin.decornekrasova.ru/free-mail-sender/send-email   ", {
+            const response = await fetch("https://admin.decornekrasova.ru/free-mail-sender/send-email", {
                 method: "POST",
                 mode: "no-cors",
                 headers: {
