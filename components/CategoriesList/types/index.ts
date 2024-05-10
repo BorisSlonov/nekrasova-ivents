@@ -1,6 +1,6 @@
 export interface ICategoriesCard {
   imgSrc: string;
-  goods: string;
+  goods: string[];
   img: {
     id: number;
     url: string;
