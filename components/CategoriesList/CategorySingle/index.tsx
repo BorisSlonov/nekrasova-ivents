@@ -16,34 +16,38 @@ interface Props {
 const CategorySingle = ({ categoryData }: Props) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, { once: true });
-  return (
-    <div ref={containerRef}>
-      <div className="container">
-        <h1 className={cn('fadeInUp h1NotMain', { ['fadeInUp_active']: isInView })}>{categoryData[0].goods[0].title}</h1>
-        <div className={styles.body}>
-          {
-            categoryData.map((category, index) => (
-              <Link href="#form" key={index} className={styles.card}>
-                <Image
-                  className={styles.img}
-                  quality={100}
-                  alt={"Услуга"}
-                  width={300}
-                  height={380}
-                  src={'https://admin.decornekrasova.ru' + category.img[0].url}
-                  sizes="100vw"
-                  priority
-                />
-                <h3 className={styles.title}>{category.title}</h3>
-                <ReactMarkdown className={styles.text}>{category.text}</ReactMarkdown>
-                <p className={styles.price}>{category.price}</p>
-              </Link>
-            ))}
-        </div>
 
+  // Check if categoryData is empty
+  if (!categoryData || categoryData.length === 0) {
+    return null; // Render nothing if categoryData is empty
+  }
+
+  // Check if goods array exists in the first item of categoryData
+  const title = categoryData[0]?.goods[0]?.title || '';
+
+  return (
+    <div className="container" ref={containerRef}>
+      <h1 className={cn('fadeInUp h1NotMain', { ['fadeInUp_active']: isInView })}>{title}</h1>
+      <div className={styles.body}>
+        {categoryData.map((category, index) => (
+          <Link href="#form" key={index} className={styles.card}>
+            <Image
+              className={styles.img}
+              quality={100}
+              alt={"Услуга"}
+              width={300}
+              height={380}
+              src={'https://admin.decornekrasova.ru' + (category.img?.[0]?.url || '')}
+              sizes="100vw"
+              priority
+            />
+            <h3 className={styles.title}>{category.title}</h3>
+            <ReactMarkdown className={styles.text}>{category.text}</ReactMarkdown>
+            <p className={styles.price}>{category.price}</p>
+          </Link>
+        ))}
       </div>
     </div>
-
   );
 };
 

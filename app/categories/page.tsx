@@ -4,6 +4,13 @@ import CategoriesList from "@/components/CategoriesList";
 import AnimWrap from "@/components/ui/AnimWrap";
 import Reviews from "@/components/Reviews";
 import LastForm from "@/components/LastForm";
+import { Metadata } from "next";
+
+
+export const metadata: Metadata = {
+  title: "Декор Некрасова - Категории",
+  description: "Категории услуг по оформлению мероприятий",
+};
 
 
 const Categories = async () => {

@@ -1,13 +1,12 @@
 import React from "react";
 import Image from "next/image";
-import styles from "./styles.module.css"
 import Link from "next/link";
+import styles from "./styles.module.css";
 import { ICategoriesCard } from "../types";
-
 
 const CategoriesCard = ({ title, text, slug, imgSrc }: ICategoriesCard) => {
     return (
-        <div className={styles.card}>
+        <Link className={styles.card} href={`/categories/${slug}`} passHref>
             <Image
                 className={styles.img}
                 quality={100}
@@ -20,8 +19,8 @@ const CategoriesCard = ({ title, text, slug, imgSrc }: ICategoriesCard) => {
             />
             <h3 className={styles.name}>{title}</h3>
             <div className={styles.text}>{text}</div>
-            <Link className={styles.link} href={`/categories/${slug}`}>Перейти</Link>
-        </div>
+            <span className={styles.link}>Перейти</span>
+        </Link>
     );
 };
 export default CategoriesCard;

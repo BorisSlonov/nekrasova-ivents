@@ -1,4 +1,5 @@
 'use client'
+import Image from "next/image";
 import React, { useRef } from "react";
 import { useInView } from "framer-motion";
 import cn from "classnames";
@@ -16,6 +17,12 @@ const LastFormWrapper = () => {
                     <div className="contactForm__body">
                         <div className="contactForm__item">
 
+                            <Image
+                                width={100}
+                                height={200}
+                                src={"/logo_light.svg"}
+                                alt={"лого"}
+                            />
                             <Form />
 
                         </div>

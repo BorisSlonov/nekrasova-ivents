@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { usePathname, useSearchParams } from "next/navigation";
 import Script from "next/script";
 
+
 const Metrika = () => {
     const pathName = usePathname();
     const searchParams = useSearchParams();
@@ -31,7 +32,3 @@ const Metrika = () => {
 }
 
 export default Metrika;
-
-function ym(arg0: number, arg1: string, href: string) {
-    throw new Error("Function not implemented.");
-}

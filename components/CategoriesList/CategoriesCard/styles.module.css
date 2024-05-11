@@ -8,7 +8,15 @@
     transition: all .3s;
     cursor: pointer;
     color: #000;
+    transition: all .3s;
+    cursor: pointer;
 }
+
+
+.card:hover {
+    color: var(--accent);
+}
+
 
 .img {
     width: 100%;
@@ -26,11 +34,11 @@
     display: inline-flex;
     padding: 6px 24px;
     border-radius: 50px;
-    background-color: var(--accent);
-    color: #fff;
+    color: var(--accent);
     text-align: center;
+    transition: 2s;
 }
 
-.name {
-    
+.card:hover .link {
+    transform: translateY(6px)
 }

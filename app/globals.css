@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
 
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -11,6 +12,7 @@ html {
 }
 
 html {
+  scroll-behavior: smooth;
   scroll-padding-top: 114px;
 }
 
@@ -70,8 +72,10 @@ main {
 }
 
 .otherWrapper {
+  position: relative;
   width: 100%;
   margin-top: 150px;
+  overflow-x: hidden;
 }
 
 .open-sans-400 {
@@ -290,10 +294,6 @@ a {
   font-weight: 600;
   font-family: var(--font-family);
   cursor: pointer;
-}
-
-.btn:hover {
-  transform: scale(1.1);
 }
 
 .btn_fill {
@@ -1748,11 +1748,24 @@ a {
 }
 
 .promo {
-  background-color: var(--dark-green);
-
+  position: relative;
 }
 
-.promo__body {}
+.promo::before {
+  content: '';
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: var(--dark-green);
+}
+
+.promo__body {
+  position: relative;
+  z-index: 3;
+}
 
 .promo__p {
   padding: 75px 0;
@@ -2032,4 +2045,15 @@ a {
 
 .t-sociallinks__wrapper a:hover {
   opacity: .8;
+}
+
+
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  color: var(--accent);
+
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--accent) !important;
 }

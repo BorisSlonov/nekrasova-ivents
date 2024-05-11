@@ -13,7 +13,8 @@ export const getContacts = async (): Promise<IContactData> => {
     return {
       id: 1,
       attributes: {
-        email: "support@decornekrasova.com",
+        email: "",
+        tel: "+7(952)184-90-96",
         Instagram:
           "https://www.instagram.com/crypto_payments?igsh=MXh6Y3EydXhwaDV2aA==",
         telegram: "https://t.me/decornekrasova_B2B",

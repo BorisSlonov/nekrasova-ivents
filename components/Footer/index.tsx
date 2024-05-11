@@ -34,44 +34,44 @@ const Footer = () => {
             <h3 className="footer__h3">Категории</h3>
             <ul className="hoverOpen__list_shops">
               <li className="hoverOpen__li">
-                <a href="#" className="hoverOpen__a">
+                <Link href={"/categories/vozdushnyeshary"} className="hoverOpen__a">
                   <h4 className="hoverOpen__h4">
                     <img width="24" height="24" src="/icons/Tilda_Icons_5ev_baloons.svg" alt="" className="hoverOpen__h4-icon" />
                     <span className="hoverOpen__h4-span">Воздушные шары</span>
                   </h4>
-                </a>
+                </Link>
               </li>
               <li className="hoverOpen__li">
-                <a href="#" className="hoverOpen__a">
+                <Link href={"/categories/vypusknoj"} className="hoverOpen__a">
                   <h4 className="hoverOpen__h4">
                     <img width="24" height="24" src="/icons/Tilda_Icons_5ev_disco.svg" alt="" className="hoverOpen__h4-icon" />
                     <span className="hoverOpen__h4-span">Выпускной вечер</span>
                   </h4>
-                </a>
+                </Link>
               </li>
               <li className="hoverOpen__li">
-                <a href="#" className="hoverOpen__a">
+                <Link href={"/categories/svadebnyjdecor"} className="hoverOpen__a">
                   <h4 className="hoverOpen__h4">
                     <img width="24" height="24" src="/icons/Tilda_Icons_5ev_magic.svg" alt="" className="hoverOpen__h4-icon" />
                     <span className="hoverOpen__h4-span">Свадебный декор</span>
                   </h4>
-                </a>
+                </Link>
               </li>
               <li className="hoverOpen__li">
-                <a href="#" className="hoverOpen__a">
+                <Link href={'/categories/wedding-accessories'} className="hoverOpen__a">
                   <h4 className="hoverOpen__h4">
                     <img width="24" height="24" src="/icons/Tilda_Icons_5ev_medal.svg" alt="" className="hoverOpen__h4-icon" />
                     <span className="hoverOpen__h4-span">Свадебные аксессуары</span>
                   </h4>
-                </a>
+                </Link>
               </li>
               <li className="hoverOpen__li">
-                <a href="#" className="hoverOpen__a">
+                <Link href={'/categories/sharydlyabiznesa'} className="hoverOpen__a">
                   <h4 className="hoverOpen__h4">
                     <img width="24" height="24" src="/icons/Tilda_Icons_5ev_couple.svg" alt="" className="hoverOpen__h4-icon" />
                     <span className="hoverOpen__h4-span">Корпоративные клиенты</span>
                   </h4>
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

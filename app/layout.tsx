@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import Metrika from "@/components/Metrika";
 
 
 export const metadata: Metadata = {

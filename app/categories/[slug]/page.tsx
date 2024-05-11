@@ -11,6 +11,7 @@ import SectionWrap from "@/components/ui/SectionWrap";
 import TriangleIcon from "@/components/Blog/icons/triangleIcon";
 import Link from "next/link";
 import ArticleArrow from "@/components/Blog/icons/articleArrow";
+import { Metadata } from "next";
 
 interface Props {
   params: {
@@ -20,13 +21,18 @@ interface Props {
   };
 }
 
+
 const Category = async ({ params }: Props) => {
   const { slug } = params;
   const categoryData: any = await getCategory(slug);
 
-  // if (!categoryData) {
-  //   redirect("/categories");
-  // }
+  if (!categoryData) {
+    redirect("/categories");
+  }
+
+  const title = categoryData[0]?.goods[0]?.title || "";
+
+
 
   return (
     <section className="otherWrapper">
@@ -34,7 +40,7 @@ const Category = async ({ params }: Props) => {
         <div className={'container'}>
           <h1 className={styles.header}>
             <Link href={"/categories"}>Категории</Link> <ArticleArrow />{" "}
-            {categoryData[0].goods[0].title}
+            {title}
           </h1>
         </div>
         <CategorySingle
@@ -48,7 +54,5 @@ const Category = async ({ params }: Props) => {
     </section>
   );
 };
-
-
 
 export default Category;

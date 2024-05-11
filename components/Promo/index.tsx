@@ -20,7 +20,7 @@ const Promo = () => {
                             <p className="promo__p">
                                 Мы создаем не только воздушное настроение, но декор для важных событий. Наша работа
                                 сочетает в себе материалы высочайшего класса, ручную работу и любовь создателей.
-                                <a href="#" className="promo__btn btn btn_fill">
+                                <a href="#form" className="promo__btn btn btn_fill">
                                     Оставить заявку
                                 </a>
                             </p>

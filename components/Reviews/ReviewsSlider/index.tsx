@@ -28,14 +28,15 @@ const ReviewsSlider = ({ dataSlider, domain }: IReviewsSlider) => {
                         spaceBetween={30}
                         slidesPerView={1}
                         autoHeight={true}
-                        navigation
                         pagination
                         breakpoints={{
                             900: {
                                 slidesPerView: 3
                             },
                             550: {
-                                slidesPerView: 2
+                                slidesPerView: 2,
+                                navigation: false
+
                             }
                         }}
                     >
