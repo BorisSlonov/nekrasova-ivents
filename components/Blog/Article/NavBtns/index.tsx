@@ -24,23 +24,21 @@ const NavBtns = async ({ className, pageId, curFilter }: Props) => {
   return (
     <div className={cn(styles.navBtns, className)}>
       <button className={styles.btn}>
-        <Link
-          className={styles.link}
-          href={getHref("prev", pageId, articlesData, curFilter)}
-        >
-          <ArrowIcon />
-          Предидущая
-        </Link>
+        {getHref("prev", pageId, articlesData, curFilter) !== pageId && (
+          <Link className={styles.link} href={getHref("prev", pageId, articlesData, curFilter)}>
+            <ArrowIcon />
+            Предыдущая
+          </Link>
+        )}
       </button>
 
       <button className={cn(styles.btn, styles.nextBtn)}>
-        <Link
-          className={styles.link}
-          href={getHref("next", pageId, articlesData, curFilter)}
-        >
-          Следующая
-          <ArrowIcon />
-        </Link>
+        {getHref("next", pageId, articlesData, curFilter) !== pageId && (
+          <Link className={styles.link} href={getHref("next", pageId, articlesData, curFilter)}>
+            Следующая
+            <ArrowIcon />
+          </Link>
+        )}
       </button>
     </div>
   );
