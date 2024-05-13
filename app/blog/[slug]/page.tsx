@@ -40,7 +40,7 @@ const ArticlePage = async ({ params, searchParams }: Props) => {
       <div className={styles.content}>
         <div className={'container'}>
           <h1 className={styles.header}>
-            <Link href={"/categories"}>Блог</Link> <ArticleArrow />{" "}
+            <Link href={"/blog"}>Блог</Link> <ArticleArrow />{" "}
             {title}
           </h1>
         </div>
