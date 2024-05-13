@@ -16,7 +16,7 @@ const ArrowIcon = ({ className }: Props) => {
     >
       <path
         d="M24 56L56 24M56 24L56 48M56 24L32 24"
-        stroke="#F8E32B"
+        stroke="#3f5842"
         strokeWidth="4"
         strokeLinecap="round"
         strokeLinejoin="round"

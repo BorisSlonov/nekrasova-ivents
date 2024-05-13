@@ -1,19 +1,15 @@
-import { IArticle, IBlogFilters } from "@/components/Blog/types";
-import { getArticlesUrl } from "@/components/Blog/utils/getArticlesUrl";
-
-export const getArticles = async (
-  filter: IBlogFilters
-): Promise<IArticle[] | undefined> => {
-  const url = getArticlesUrl(filter);
-
+export const getArticles = async (curFilter: string | undefined) => {
   try {
-    const result = await fetch(url, {
-      cache: "no-store",
+    const response = await fetch(`${process.env.API_URL}posts/?populate=*`, {
+      next: { revalidate: 60 },
     });
-
-    const articlesData = await result.json();
-    return articlesData.data;
+    if (!response.ok) {
+      throw new Error('Failed to fetch reviews');
+    }
+    const data = await response.json();
+    return data.data;
   } catch (error) {
-    return;
+    console.error('Error fetching menu:', error);
+    return [];
   }
 };

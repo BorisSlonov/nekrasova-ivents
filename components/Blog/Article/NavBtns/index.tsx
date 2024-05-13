@@ -29,7 +29,7 @@ const NavBtns = async ({ className, pageId, curFilter }: Props) => {
           href={getHref("prev", pageId, articlesData, curFilter)}
         >
           <ArrowIcon />
-          Previous
+          Предидущая
         </Link>
       </button>
 
@@ -38,7 +38,7 @@ const NavBtns = async ({ className, pageId, curFilter }: Props) => {
           className={styles.link}
           href={getHref("next", pageId, articlesData, curFilter)}
         >
-          Next
+          Следующая
           <ArrowIcon />
         </Link>
       </button>

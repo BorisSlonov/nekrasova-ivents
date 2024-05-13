@@ -27,7 +27,6 @@
 
 .cardList {
   display: flex;
-  justify-content: space-between;
   flex-wrap: wrap;
   gap: 24px;
   margin-top: 56px;
@@ -102,5 +101,10 @@
   .blogSection {
     padding-left: 16px;
     padding-right: 16px;
+  }
+
+  .gearIcon,
+  .circleIcon {
+    display: none;
   }
 }

@@ -9,32 +9,28 @@ import { getImageSrc } from "@/utils/getImageSrc";
 import ReactMarkdown from "react-markdown";
 
 interface Props {
-  articleData: IArticle;
+  articleData: any;
   pageId: string;
   curFilter: IBlogFilters;
 }
 
 const Article = ({ articleData, pageId, curFilter }: Props) => {
-  const {
-    attributes: { type, date, img, title, text },
-  } = articleData;
 
-  const imgSrc = getImageSrc(img.data[0].attributes.url);
+
+  const { title, text} = articleData[0]
+
+
+  const imgSrc = getImageSrc(articleData[0].img.url);
 
   return (
     <div className={styles.article}>
       <div className={styles.header}>
-        <div className={styles.bageDate}>
-          <CaterogyBage category={type} />
-          <DateBage date={date} />
-        </div>
         <NavBtns
           curFilter={curFilter}
           pageId={pageId}
           className={styles.navBtns}
         />
       </div>
-
       <Image
         quality={100}
         alt={"article image"}
@@ -48,8 +44,6 @@ const Article = ({ articleData, pageId, curFilter }: Props) => {
 
       <div className={styles.textContent}>
         <h1 className={styles.title}>{title}</h1>
-        <div className={styles.divider} />
-
         <ReactMarkdown className={styles.text}>{text}</ReactMarkdown>
       </div>
     </div>

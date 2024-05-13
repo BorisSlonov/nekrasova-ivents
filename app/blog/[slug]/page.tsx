@@ -11,34 +11,43 @@ import { getArticle } from "@/actions/getArticle";
 import { IBlogFilters } from "@/components/Blog/types";
 
 interface Props {
-  params: { id: string };
+  params: {
+    slug: string;
+    id: string;
+  };
   searchParams: { filter: IBlogFilters };
 }
 
 const ArticlePage = async ({ params, searchParams }: Props) => {
 
-  const { id } = params
-  const articleData = await getArticle(id);
+  const { slug } = params
+  const articleData: any = await getArticle(slug);
+
 
   if (!articleData) {
-    redirect("/");
+    redirect("/blog");
   }
 
   const blogLinkHref = searchParams.filter
     ? `/blog?filter=${searchParams.filter}`
     : "/blog";
 
+
+  const title = articleData[0]?.title || "";
+
   return (
     <SectionWrap tag="main" className={styles.articlePage}>
       <div className={styles.content}>
-        <h1 className={styles.header}>
-          <Link href={blogLinkHref}>Blog</Link> <ArticleArrow />{" "}
-          <span>Article</span>
-        </h1>
+        <div className={'container'}>
+          <h1 className={styles.header}>
+            <Link href={"/categories"}>Блог</Link> <ArticleArrow />{" "}
+            {title}
+          </h1>
+        </div>
 
         <Article
           curFilter={searchParams.filter}
-          pageId={params.id}
+          pageId={params.slug}
           articleData={articleData}
         />
       </div>

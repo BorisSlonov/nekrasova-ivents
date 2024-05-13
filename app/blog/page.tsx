@@ -8,27 +8,29 @@ import CircleIcon from "@/components/Blog/icons/circleIcon";
 import { getArticles } from "@/actions/getArticles";
 import { IBlogFilters } from "@/components/Blog/types";
 import AnimWrap from "@/components/ui/AnimWrap";
+import Reviews from "@/components/Reviews";
+import LastForm from "@/components/LastForm";
 
-interface Props {
-  searchParams: { filter: IBlogFilters };
-}
 
-const Blog = async ({ searchParams }: Props) => {
-  const articlesData = await getArticles(searchParams.filter);
+
+const Blog = async () => {
+  const articlesData = await getArticles();
 
   const showCards = articlesData && articlesData?.length > 0;
+  function cn(arg0: string, arg1: { animated: any; }): string | undefined {
+    throw new Error("Function not implemented.");
+  }
+
   return (
     <AnimWrap className={styles.blog}>
       <section className={styles.blogSection}>
-        <div className={styles.content}>
-          <Filters currentFilter={searchParams.filter} />
-
+        <div className="container">
+        <h2 className="h2 animated">Категории</h2>
           <div className={styles.cardList}>
             {showCards &&
-              articlesData.map((card, i) => {
+              articlesData.map((card: any, i: number) => {
                 return (
                   <Card
-                    currentFilter={searchParams.filter}
                     cardData={card}
                     key={i}
                   />
@@ -44,6 +46,9 @@ const Blog = async ({ searchParams }: Props) => {
           <TriangleIcon className={styles.triangleIcon} />
         </>
       )}
+      <Reviews />
+      <LastForm />
+
     </AnimWrap>
   );
 };

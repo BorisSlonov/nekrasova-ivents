@@ -5,6 +5,7 @@
   overflow: hidden;
   position: relative;
   z-index: 1;
+  margin-bottom: 120px;
 }
 
 .header {
@@ -56,6 +57,8 @@
 .image {
   width: 100%;
   height: auto;
+  max-height: 420px;
+  object-fit: cover;
 }
 
 .text ol,
