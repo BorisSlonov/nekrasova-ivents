@@ -11,10 +11,17 @@ import AnimWrap from "@/components/ui/AnimWrap";
 import Reviews from "@/components/Reviews";
 import LastForm from "@/components/LastForm";
 
+interface Props {
+  params: {
+    slug: string;
+    id: string;
+    title: string;
+  };
+}
 
 
-const Blog = async () => {
-  const articlesData = await getArticles();
+const Blog = async ({ params }: Props) => {
+  const articlesData = await getArticles(params.slug);
 
   const showCards = articlesData && articlesData?.length > 0;
   function cn(arg0: string, arg1: { animated: any; }): string | undefined {
@@ -25,7 +32,7 @@ const Blog = async () => {
     <AnimWrap className={styles.blog}>
       <section className={styles.blogSection}>
         <div className="container">
-        <h2 className="h2 animated">Категории</h2>
+          <h2 className="h2 animated">Блог</h2>
           <div className={styles.cardList}>
             {showCards &&
               articlesData.map((card: any, i: number) => {
