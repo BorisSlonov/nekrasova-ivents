@@ -9,6 +9,8 @@ import { redirect } from "next/navigation";
 import Link from "next/link";
 import { getArticle } from "@/actions/getArticle";
 import { IBlogFilters } from "@/components/Blog/types";
+import LastForm from "@/components/LastForm";
+import Reviews from "@/components/Reviews";
 
 interface Props {
   params: {
@@ -36,25 +38,23 @@ const ArticlePage = async ({ params, searchParams }: Props) => {
   const title = articleData[0]?.title || "";
 
   return (
-    <SectionWrap tag="main" className={styles.articlePage}>
-      <div className={styles.content}>
-        <div className={'container'}>
-          <h1 className={styles.header}>
-            <Link href={"/blog"}>Блог</Link> <ArticleArrow />{" "}
-            {title}
-          </h1>
-        </div>
-
-        <Article
-          curFilter={searchParams.filter}
-          pageId={params.slug}
-          articleData={articleData}
-        />
+    <section className="otherWrapper">
+      <div className={'container'}>
+        <h1 className={styles.header}>
+          <Link href={"/blog"}>Блог</Link> <ArticleArrow />{" "}
+          {title}
+        </h1>
       </div>
-
+      <Article
+        curFilter={searchParams.filter}
+        pageId={params.slug}
+        articleData={articleData}
+      />
       <YellowGearIcon className={styles.gearIcon} />
       <TriangleIcon className={styles.triangleIcon} />
-    </SectionWrap>
+      <Reviews />
+      <LastForm />
+    </section>
   );
 };
 

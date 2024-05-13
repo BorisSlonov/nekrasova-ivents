@@ -232,6 +232,7 @@ a {
 }
 
 .section_last {
+  width: 100%;
   position: relative;
 }
 
