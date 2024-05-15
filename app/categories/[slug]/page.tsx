@@ -22,6 +22,7 @@ interface Props {
 }
 
 
+
 const Category = async ({ params }: Props) => {
   const { slug } = params;
   const categoryData: any = await getCategory(slug);
@@ -31,8 +32,6 @@ const Category = async ({ params }: Props) => {
   }
 
   const title = categoryData[0]?.goods[0]?.title || "";
-
-
 
   return (
     <section className="otherWrapper">

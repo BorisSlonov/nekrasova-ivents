@@ -17,12 +17,9 @@ const CategorySingle = ({ categoryData }: Props) => {
   const containerRef = useRef<HTMLDivElement>(null);
   const isInView = useInView(containerRef, { once: true });
 
-  // Check if categoryData is empty
   if (!categoryData || categoryData.length === 0) {
-    return null; // Render nothing if categoryData is empty
+    return null;
   }
-
-  // Check if goods array exists in the first item of categoryData
   const title = categoryData[0]?.goods[0]?.title || '';
 
   return (
