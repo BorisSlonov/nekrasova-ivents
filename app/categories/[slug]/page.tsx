@@ -27,11 +27,11 @@ const Category = async ({ params }: Props) => {
   const { slug } = params;
   const categoryData: any = await getCategory(slug);
 
-  if (!categoryData) {
-    redirect("/categories");
-  }
+  // if (!categoryData) {
+  //   redirect("/categories");
+  // }
 
-  const title = categoryData[0]?.goods[0]?.title || "";
+  const title = categoryData[0]?.categories[0]?.title || "";
 
   return (
     <section className="otherWrapper">

@@ -1,7 +1,4 @@
-import { getCategoriesUrl } from "@/components/Blog/utils/getCategoriesUrl";
-
 export const getCategories = async () => {
-    const url = getCategoriesUrl();
     try {
         const response = await fetch(`${process.env.API_URL}categories/?populate=*`, {
             next: { revalidate: 60 },

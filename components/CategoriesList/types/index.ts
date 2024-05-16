@@ -1,6 +1,6 @@
 export interface ICategoriesCard {
   imgSrc: string;
-  goods: {
+  subcategories: {
     title: string
   }[];
   img: {

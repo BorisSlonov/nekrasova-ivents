@@ -20,7 +20,7 @@ const CategorySingle = ({ categoryData }: Props) => {
   if (!categoryData || categoryData.length === 0) {
     return null;
   }
-  const title = categoryData[0]?.goods[0]?.title || '';
+  const title = categoryData[0]?.subcategories[0]?.title || '';
 
   return (
     <div className="container" ref={containerRef}>

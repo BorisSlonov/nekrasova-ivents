@@ -23,10 +23,11 @@ const CategoriesWrapper = ({ dataCategories, domain }: ICategories) => {
                                 title={item.title}
                                 text={item.text}
                                 slug={item.slug}
-                                imgSrc={domain + item.catalogCard.url}
-                                catalogCard={{
-                                    url: item.catalogCard.url
-                                }} goods={[]} img={[]} id={0} price={""} />
+                                imgSrc={item.catalogCard ? domain + item.catalogCard.url : ''} // Добавляем проверку на наличие catalogCard
+
+                                subcategories={[]} img={[]} id={index} price={""} catalogCard={{
+                                    url: ""
+                                }} />
                         ))}
                     </div>
                 </div>
