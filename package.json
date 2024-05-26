@@ -15,6 +15,7 @@
     "classnames": "^2.5.1",
     "dayjs": "^1.11.10",
     "framer-motion": "^11.0.6",
+    "lodash.debounce": "^4.0.8",
     "lottie-react": "^2.4.0",
     "next": "14.1.0",
     "next-themes": "^0.2.1",
@@ -25,9 +26,11 @@
     "react-lottie": "^1.2.4",
     "react-markdown": "^9.0.1",
     "swiper": "^11.0.7",
-    "use-debounce": "^10.0.0"
+    "use-debounce": "^10.0.0",
+    "zustand": "^4.5.2"
   },
   "devDependencies": {
+    "@types/lodash.debounce": "^4.0.9",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

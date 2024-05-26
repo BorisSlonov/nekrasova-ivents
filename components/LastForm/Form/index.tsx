@@ -1,36 +1,57 @@
-import React, { useState } from "react";
+// Form.tsx
+import React, { useState } from 'react';
 
-const Form = () => {
-    const [tel, setTel] = useState("");
-    const [name, setName] = useState("");
-    const [msg, setMsg] = useState("");
+interface CartItem {
+    id: number;
+    title: string;
+    price: string;
+    quantity: number;
+    img: string;
+}
 
-    const handleSubmit = async (e: { preventDefault: () => void; }) => {
+interface FormProps {
+    cart: CartItem[];
+}
+
+const Form: React.FC<FormProps> = ({ cart }) => {
+    const [tel, setTel] = useState('');
+    const [name, setName] = useState('');
+    const [msg, setMsg] = useState('');
+
+    const handleSubmit = async (e: { preventDefault: () => void }) => {
         e.preventDefault();
 
+        const cartDetails = cart
+            .map(
+                (item) =>
+                    `Название: ${item.title}, Количество: ${item.quantity}, Цена: ${item.price}`
+            )
+            .join('\n');
+
         const formData = {
-            toEmail: [
-                "yes.wedding.tomsk@yandex.ru",
-                "sslonovborisss@gmail.com",
-            ],
-            subject: "Заявка с сайта decornekrasova",
-            mailText: "Телефон:" + tel + " Имя:" + name + " Сообщение:" + msg,
+            toEmail: ['yes.wedding.tomsk@yandex.ru', 'sslonovborisss@gmail.com'],
+            subject: 'Заявка с сайта decornekrasova',
+            mailText: `Телефон: ${tel}\nИмя: ${name}\nСообщение: ${msg}\n\nCart Details:\n${cartDetails}`,
         };
 
         try {
-            const response = await fetch("https://admin.decornekrasova.ru/free-mail-sender/send-email", {
-                method: "POST",
-                headers: {
-                    "Content-Type": "application/json",
-                    "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzE1MzMzODY4LCJleHAiOjE3MTc5MjU4Njh9.DhGoFVuuuNxMto7crHF7PeM62dufzhIjQe2eTzyxlJQ"
-                },
-                body: JSON.stringify(formData),
-            });
+            const response = await fetch(
+                'https://admin.decornekrasova.ru/free-mail-sender/send-email',
+                {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        Authorization:
+                            'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzE1MzMzODY4LCJleHAiOjE3MTc5MjU4Njh9.DhGoFVuuuNxMto7crHF7PeM62dufzhIjQe2eTzyxlJQ',
+                    },
+                    body: JSON.stringify(formData),
+                }
+            );
 
             if (response.ok) {
-                alert("Спасибо за заявку! Мы Свяжемся с вами в ближайшее время");
+                alert('Спасибо за заявку! Мы Свяжемся с вами в ближайшее время');
             } else {
-                throw new Error("Failed to send email");
+                throw new Error('Failed to send email');
             }
         } catch (error) {
             console.error(error);
@@ -38,32 +59,32 @@ const Form = () => {
     };
 
     return (
-        <form className="form" onSubmit={handleSubmit}>
+        <form className='form' onSubmit={handleSubmit}>
             <input
-                className="form__input"
-                type="tel"
-                name="tel"
+                className='form__input'
+                type='tel'
+                name='tel'
                 required
-                placeholder="Номер телефона"
+                placeholder='Номер телефона'
                 value={tel}
                 onChange={(e) => setTel(e.target.value)}
             />
             <input
-                className="form__input"
-                type="text"
-                name="name"
-                placeholder="Имя"
+                className='form__input'
+                type='text'
+                name='name'
+                placeholder='Имя'
                 value={name}
                 onChange={(e) => setName(e.target.value)}
             />
             <textarea
-                name="msg"
-                className="form__textarea"
-                placeholder="Сообщение"
+                name='msg'
+                className='form__textarea'
+                placeholder='Сообщение'
                 value={msg}
                 onChange={(e) => setMsg(e.target.value)}
             ></textarea>
-            <button type="submit" className="btn btn_fill">
+            <button type='submit' className='btn btn_fill'>
                 Отправить
             </button>
         </form>

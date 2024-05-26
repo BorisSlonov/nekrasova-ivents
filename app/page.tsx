@@ -7,6 +7,7 @@ import Achievs from "@/components/Achievs";
 import Promo from "@/components/Promo";
 import Categories from "@/components/CategoriesList";
 import LastForm from "@/components/LastForm";
+import Cart from "@/components/Cart";
 
 export default function Home() {
   return (
