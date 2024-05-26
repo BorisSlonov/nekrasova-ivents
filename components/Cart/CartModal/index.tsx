@@ -27,17 +27,17 @@ const CartModal: React.FC<Props> = ({ isOpen, onClose }) => {
         }
     };
 
-    // const getTotalPrice = cart.reduce((total, item) => {
-    //     let priceDigits: number;
+    const getTotalPrice = cart.reduce((total, item) => {
+        let priceDigits: number;
 
-    //     if (typeof item.price === 'string') {
-    //         priceDigits = parseFloat(item.price.replace(/[^\d.]/g, ''));
-    //     } else {
-    //         priceDigits = item.price;
-    //     }
+        if (typeof item.price === 'string') {
+            priceDigits = parseFloat(item.price.replace(/[^\d.]/g, ''));
+        } else {
+            priceDigits = item.price;
+        }
 
-    //     return total + priceDigits * item.quantity;
-    // }, 0);
+        return total + priceDigits * item.quantity;
+    }, 0);
 
     return (
         <div className={styles.cartModal}>
@@ -67,7 +67,7 @@ const CartModal: React.FC<Props> = ({ isOpen, onClose }) => {
                             </div>
                         ))}
                         <p className={styles.totalPrice}>
-                            {/* Общая сумма: {getTotalPrice} руб. */}
+                            Общая сумма: {getTotalPrice} руб.
                         </p>
                         <button onClick={clearCart}>Очистить корзину</button>
                     </div>
