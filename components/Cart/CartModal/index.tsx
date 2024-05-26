@@ -8,7 +8,6 @@ interface Props {
     onClose: () => void;
 }
 
-
 const CartModal: React.FC<Props> = ({ isOpen, onClose }) => {
     const { cart, removeFromCart, clearCart, updateQuantity } = useCartStore();
 
@@ -28,11 +27,17 @@ const CartModal: React.FC<Props> = ({ isOpen, onClose }) => {
         }
     };
 
-    const getTotalPrice = cart.reduce((total, item) => {
-        const priceDigits: number = parseFloat(item.price.replace(/[^\d.]/g, ''))
-        return total + (priceDigits as number) * item.quantity;
-    }, 0);
+    // const getTotalPrice = cart.reduce((total, item) => {
+    //     let priceDigits: number;
 
+    //     if (typeof item.price === 'string') {
+    //         priceDigits = parseFloat(item.price.replace(/[^\d.]/g, ''));
+    //     } else {
+    //         priceDigits = item.price;
+    //     }
+
+    //     return total + priceDigits * item.quantity;
+    // }, 0);
 
     return (
         <div className={styles.cartModal}>
@@ -62,7 +67,7 @@ const CartModal: React.FC<Props> = ({ isOpen, onClose }) => {
                             </div>
                         ))}
                         <p className={styles.totalPrice}>
-                            Общая сумма: {getTotalPrice} руб.
+                            {/* Общая сумма: {getTotalPrice} руб. */}
                         </p>
                         <button onClick={clearCart}>Очистить корзину</button>
                     </div>

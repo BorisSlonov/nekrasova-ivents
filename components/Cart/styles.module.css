@@ -20,3 +20,9 @@
     bottom: 48px;
     right: 48px;
 }
+
+.cartIcon {
+    border-radius: 50%;
+    border: none;
+    fill: var(--accent);
+}

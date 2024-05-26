@@ -22,7 +22,6 @@ const CategorySingle = ({ categoryData }: Props) => {
     return null;
   }
 
-  // Get unique subcategory titles
   const subcategoryTitles = Array.from(new Set(categoryData.flatMap(category => category.subcategories.map(sub => sub.name))));
 
   const filteredCategoryData = selectedSubcategory
@@ -32,21 +31,16 @@ const CategorySingle = ({ categoryData }: Props) => {
   return (
     <div className="container" ref={containerRef}>
       <h1 className={cn('fadeInUp h1NotMain', { ['fadeInUp_active']: isInView })}>
-        {selectedSubcategory || 'Все категории'}
+        {selectedSubcategory || 'Все подкатегории'}
       </h1>
 
       <div className={styles.filter}>
-        <label htmlFor="subcategoryFilter">Фильтр по подкатегории:</label>
-        <select
-          id="subcategoryFilter"
-          value={selectedSubcategory}
-          onChange={(e) => setSelectedSubcategory(e.target.value)}
-        >
-          <option value="">Все подкатегории</option>
+        <label htmlFor="subcategoryFilter">Фильтр по подкатегории</label>
+        <div className={styles.subcatsbtnwrapper}>
           {subcategoryTitles.map((title, index) => (
-            <option key={index} value={title}>{title}</option>
+            <button className={styles.subcatsbtn} onClick={(e) => setSelectedSubcategory(e.target.value)} key={index} value={title}>{title}</button>
           ))}
-        </select>
+        </div>
       </div>
 
       <div className={styles.body}>

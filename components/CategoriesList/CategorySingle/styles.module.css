@@ -58,3 +58,25 @@
     font-size: 18px;
     margin-top: auto;
 }
+
+.subcatsbtn {
+    padding: 8px;
+    border-radius: 8px;
+    background-color: #fff;
+    border: 1px solid var(--accent);
+    transition: all .3s;
+}
+
+.subcatsbtnwrapper {
+    margin-top: 16px;
+    margin-bottom: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.subcatsbtn:hover {
+    opacity: .8;
+    color: var(--dark-green);
+    border-color: var(--dark-green);
+}

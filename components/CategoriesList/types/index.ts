@@ -5,6 +5,7 @@ export interface ICategoriesCard {
     title: string
   }[];
   img: {
+    formats: any;
     id: number;
     url: string;
   }[];
