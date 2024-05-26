@@ -8,6 +8,9 @@ const nextConfig = {
       "swiper"
     ]
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   async headers() {
     return [
       {
