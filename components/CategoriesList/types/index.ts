@@ -1,6 +1,7 @@
 export interface ICategoriesCard {
   imgSrc: string;
   subcategories: {
+    name: any;
     title: string
   }[];
   img: {
@@ -17,6 +18,11 @@ export interface ICategoriesCard {
     url: string;
   };
 }
+
+export interface ISubcategory {
+  id: number;
+  name: string;
+};
 
 export interface ICategories {
   dataCategories: ICategoriesCard[];

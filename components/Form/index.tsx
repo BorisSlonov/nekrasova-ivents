@@ -1,10 +1,9 @@
-// Form.tsx
 import React, { useState } from 'react';
 
 interface CartItem {
     id: number;
     title: string;
-    price: string;
+    price: any;
     quantity: number;
     img: string;
 }
@@ -29,9 +28,10 @@ const Form: React.FC<FormProps> = ({ cart }) => {
             .join('\n');
 
         const formData = {
-            toEmail: ['yes.wedding.tomsk@yandex.ru', 'sslonovborisss@gmail.com'],
+            // 'yes.wedding.tomsk@yandex.ru',
+            toEmail: ['sslonovborisss@gmail.com'],
             subject: 'Заявка с сайта decornekrasova',
-            mailText: `Телефон: ${tel}\nИмя: ${name}\nСообщение: ${msg}\n\nCart Details:\n${cartDetails}`,
+            mailText: `Телефон: ${tel}\nИмя: ${name}\nСообщение: ${msg}\n\nКорзина:\n${cartDetails}`,
         };
 
         try {

@@ -1,6 +1,7 @@
 'use client'
 import React, { useState } from 'react';
 import CartModal from './CartModal';
+import CartIcon from './icons/cart'
 import styles from './styles.module.css';
 
 const Cart = () => {
@@ -11,7 +12,9 @@ const Cart = () => {
 
   return (
     <div className={styles.cart}>
-      <button onClick={openCart} className={styles.cartButton}>Open Cart</button>
+      <button onClick={openCart} className={styles.cartButton}>
+        <CartIcon />
+      </button>
       <CartModal isOpen={isCartOpen} onClose={closeCart} />
     </div>
   );

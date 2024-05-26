@@ -1,12 +1,13 @@
 import React from 'react';
 import useCartStore from '@/store/cartStore';
 import styles from '../styles.module.css';
-import Form from '@/components/LastForm/Form';
+import Form from '@/components/Form';
 
 interface Props {
     isOpen: boolean;
     onClose: () => void;
 }
+
 
 const CartModal: React.FC<Props> = ({ isOpen, onClose }) => {
     const { cart, removeFromCart, clearCart, updateQuantity } = useCartStore();
@@ -28,9 +29,10 @@ const CartModal: React.FC<Props> = ({ isOpen, onClose }) => {
     };
 
     const getTotalPrice = cart.reduce((total, item) => {
-        const priceDigits = parseFloat(item.price.replace(/[^\d.]/g, ''));
-        return total + priceDigits * item.quantity;
+        const priceDigits: number = parseFloat(item.price.replace(/[^\d.]/g, ''))
+        return total + (priceDigits as number) * item.quantity;
     }, 0);
+
 
     return (
         <div className={styles.cartModal}>
@@ -60,7 +62,7 @@ const CartModal: React.FC<Props> = ({ isOpen, onClose }) => {
                             </div>
                         ))}
                         <p className={styles.totalPrice}>
-                            Общая сумма: {getTotalPrice} руб
+                            Общая сумма: {getTotalPrice} руб.
                         </p>
                         <button onClick={clearCart}>Очистить корзину</button>
                     </div>

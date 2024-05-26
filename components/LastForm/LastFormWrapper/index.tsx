@@ -5,8 +5,7 @@ import { useInView } from "framer-motion";
 import cn from "classnames";
 import { ICategoriesCard } from "../types";
 import styles from "./styles.module.css"
-import Form from "../Form";
-
+import Form from "@/components/Form";
 
 
 const LastFormWrapper = () => {
@@ -16,15 +15,13 @@ const LastFormWrapper = () => {
                 <div className="container">
                     <div className="contactForm__body">
                         <div className="contactForm__item">
-
                             <Image
                                 width={100}
                                 height={200}
                                 src={"/logo_light.svg"}
                                 alt={"лого"}
                             />
-                            <Form />
-
+                            <Form cart={[]} />
                         </div>
                         <div className="contactForm__item">
                             <div className="contacts">
