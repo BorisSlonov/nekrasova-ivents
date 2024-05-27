@@ -16,13 +16,9 @@
     border-radius: 10px;
     background-color: #fff;
     transition: all .6s;
-    cursor: pointer;
     color: #000;
 }
 
-.card:hover {
-    color: var(--accent);
-}
 
 .img {
     width: 100%;
@@ -105,7 +101,29 @@
     border-radius: 50px;
     color: var(--accent);
     text-align: center;
-    transition: 2s;
+    transition: all .3s;
     border: none;
     font-size: 14px;
+}
+
+.prodLink:hover {
+    color: var(--dark-blue);
+    background-color: #00000009;
+}
+
+.textWrapper {
+    position: relative;
+    height: 80px;
+    overflow: hidden;
+}
+
+.textWrapper::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background: rgb(255, 255, 255);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.2189250700280112) 100%);
 }

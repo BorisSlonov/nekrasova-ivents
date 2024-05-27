@@ -57,19 +57,21 @@ const CategorySingle = ({ categoryData }: Props) => {
               alt={"Услуга"}
               width={300}
               height={380}
-              src={'https://admin.decornekrasova.ru' + (category.img?.[0]?.formats?.small?.url || '')}
+              src={'https://admin.decornekrasova.ru' + (category.img?.[0]?.url || '')}
               sizes="100vw"
               priority
             />
             <h3 className={styles.title}>{category.title}</h3>
-            <ReactMarkdown className={styles.text}>{category.text}</ReactMarkdown>
+            <div className={styles.textWrapper}>
+              <ReactMarkdown className={styles.text}>{category.text}</ReactMarkdown>
+            </div>
             <p className={styles.price}>{category.price}</p>
             <Link className={styles.prodLink} href={"/product/" + category.slug}>
               Подробнее
             </Link>
             <button
               className={styles.addToCartBtn}
-              onClick={() => addToCart({ id: category.id, title: category.title, price: category.price, img: category.img?.[0]?.formats?.small?.url })}>
+              onClick={() => addToCart({ id: category.id, title: category.title, price: category.price, img: category.img?.[0]?.url })}>
               В корзину
             </button>
           </div>

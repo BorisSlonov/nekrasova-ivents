@@ -14,19 +14,20 @@
     border-radius: 10px;
     background-color: #fff;
     transition: all .6s;
-    cursor: pointer;
     color: #000;
 }
 
-.card:hover {
-    color: var(--accent);
+.images {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
 }
 
 .img {
-    width: 100%;
-    display: block;
-    height: 240px;
-    object-fit: cover;
+    flex-basis: calc(33.333% - 24px);
+    height: 100%;
+    max-height: 589px;
+    object-fit: contain;
     object-position: center center;
     border-radius: 10px;
 }

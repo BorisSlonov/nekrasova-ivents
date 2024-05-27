@@ -38,13 +38,6 @@
     opacity: .8;
 }
 
-@media(max-width:767px) {
-    .cartButton {
-        width: 48px;
-        height: 48px;
-    }
-}
-
 .cartIcon {
     fill: var(--accent);
 }
@@ -129,7 +122,7 @@
 
 .cartImg {
     object-fit: cover;
-    max-width: 130px;
+    max-width: 80px;
     height: 100%
 }
 

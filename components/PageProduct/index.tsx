@@ -6,12 +6,10 @@ import ReactMarkdown from "react-markdown";
 import { useInView } from "framer-motion";
 import styles from "./styles.module.css";
 import useCartStore from "@/store/cartStore";
-import { Navigation, Pagination } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
-
 
 interface Props {
     productData: {
@@ -48,6 +46,7 @@ const PageProduct = ({ productData }: Props) => {
 
     const product = productData[0];
     const images = product.img || [];
+    const slidesPerView = images.length <= 1 ? 1 : images.length <= 2 ? 2 : 3;
 
     return (
         <div className="container" ref={containerRef}>
@@ -56,16 +55,42 @@ const PageProduct = ({ productData }: Props) => {
                     {product.title}
                 </h1>
                 <div className={styles.card}>
-                    <Swiper
-                        className={styles.slider}
-                        navigation
-                        pagination={{ clickable: true }}
-                        spaceBetween={50}
-                        slidesPerView={3}
-                    >
-                        {images.map((image, index) => (
-                            <SwiperSlide key={index}>
+                    {images.length > 2 ? (
+                        <Swiper
+                            className={styles.slider}
+                            navigation
+                            pagination={{ clickable: true }}
+                            spaceBetween={50}
+                            slidesPerView={slidesPerView}
+                            breakpoints={{
+                                640: {
+                                    slidesPerView: 1,
+                                },
+                                768: {
+                                    slidesPerView: 2,
+                                }
+                            }}
+                        >
+                            {images.map((image, index) => (
+                                <SwiperSlide key={index}>
+                                    <Image
+                                        className={styles.img}
+                                        quality={100}
+                                        alt={`Услуга ${index + 1}`}
+                                        width={300}
+                                        height={380}
+                                        src={`https://admin.decornekrasova.ru${image.formats?.small?.url || ''}`}
+                                        sizes="100vw"
+                                        priority
+                                    />
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                    ) : (
+                        <div className={styles.images}>
+                            {images.map((image, index) => (
                                 <Image
+                                    key={index}
                                     className={styles.img}
                                     quality={100}
                                     alt={`Услуга ${index + 1}`}
@@ -75,9 +100,9 @@ const PageProduct = ({ productData }: Props) => {
                                     sizes="100vw"
                                     priority
                                 />
-                            </SwiperSlide>
-                        ))}
-                    </Swiper>
+                            ))}
+                        </div>
+                    )}
                     <h3 className={styles.title}>{product.title}</h3>
                     <ReactMarkdown className={styles.text}>{product.text}</ReactMarkdown>
                     <p className={styles.price}>{product.price}</p>
