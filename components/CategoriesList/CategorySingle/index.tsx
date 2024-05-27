@@ -1,3 +1,4 @@
+// CategorySingle.tsx
 'use client'
 import React, { useRef, useState } from "react";
 import cn from "classnames";
@@ -37,6 +38,9 @@ const CategorySingle = ({ categoryData }: Props) => {
       <div className={styles.filter}>
         <label htmlFor="subcategoryFilter">Фильтр по подкатегории</label>
         <div className={styles.subcatsbtnwrapper}>
+          <button className={styles.subcatsbtn} onClick={() => setSelectedSubcategory('')} key="all">
+            Все подкатегории
+          </button>
           {subcategoryTitles.map((title, index) => (
             <button className={styles.subcatsbtn} onClick={(e) => setSelectedSubcategory(e.target.value)} key={index} value={title}>{title}</button>
           ))}
@@ -59,7 +63,9 @@ const CategorySingle = ({ categoryData }: Props) => {
             <h3 className={styles.title}>{category.title}</h3>
             <ReactMarkdown className={styles.text}>{category.text}</ReactMarkdown>
             <p className={styles.price}>{category.price}</p>
-            <button onClick={() => addToCart({ id: category.id, title: category.title, price: category.price, img: category.img?.[0]?.formats?.thumbnail?.url })}>
+            <button
+              className={styles.addToCartBtn}
+              onClick={() => addToCart({ id: category.id, title: category.title, price: category.price, img: category.img?.[0]?.formats?.thumbnail?.url })}>
               В корзину
             </button>
           </div>

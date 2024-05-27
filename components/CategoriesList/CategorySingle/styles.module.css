@@ -68,6 +68,8 @@
 }
 
 .subcatsbtnwrapper {
+    position: relative;
+    z-index: 2;
     margin-top: 16px;
     margin-bottom: 16px;
     display: flex;
@@ -79,4 +81,17 @@
     opacity: .8;
     color: var(--dark-green);
     border-color: var(--dark-green);
+}
+
+.addToCartBtn {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+    display: inline-flex;
+    padding: 6px 24px;
+    border-radius: 50px;
+    color: var(--accent);
+    text-align: center;
+    transition: 2s;
+    border: none;
 }

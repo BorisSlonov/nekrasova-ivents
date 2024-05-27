@@ -10,10 +10,10 @@ export interface ICategoriesCard {
     url: string;
   }[];
   id: number;
-  title?: string;
+  title: string;
   text?: string;
   subtitle?: string;
-  price: string;
+  price: number;
   slug: string;
   catalogCard: {
     url: string;
