@@ -1,6 +1,6 @@
 .cartModal {
     position: fixed;
-    z-index: 200000000000000000000000000000000000;
+    z-index: 99999999999999;
     max-height: 90%;
     width: 100%;
     max-width: 720px;
@@ -17,6 +17,8 @@
 @media(max-width:767px) {
     .cartModal {
         padding: 48px 24px;
+        max-height: 100%;
+        border-radius: 0;
     }
 }
 
