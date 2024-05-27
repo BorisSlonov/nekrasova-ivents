@@ -1,7 +1,6 @@
 import React from "react";
 import { getProduct } from "@/actions/getProduct";
-import ReviewsData from "@/components/Reviews";
-import CategorySingle from "@/components/CategoriesList/CategorySingle";
+import PageProduct from "@/components/PageProduct";
 
 interface Props {
     params: {
@@ -13,11 +12,10 @@ interface Props {
 const Product = async ({ params }: Props) => {
     const { slug } = params;
     const data: any = await getProduct(slug);
-    const title = data[0]?.categories[0]?.title || "";
     return (
         <>
-            <CategorySingle
-                categoryData={data}
+            <PageProduct
+                productData={data}
             />
         </>
     )

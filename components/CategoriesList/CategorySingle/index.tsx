@@ -8,6 +8,7 @@ import { ICategoriesCard } from "../types";
 import { useInView } from "framer-motion";
 import styles from "./styles.module.css";
 import useCartStore from "@/store/cartStore";
+import Link from "next/link";
 
 interface Props {
   categoryData: ICategoriesCard[];
@@ -56,16 +57,19 @@ const CategorySingle = ({ categoryData }: Props) => {
               alt={"Услуга"}
               width={300}
               height={380}
-              src={'https://admin.decornekrasova.ru' + (category.img?.[0]?.formats?.thumbnail?.url || '')}
+              src={'https://admin.decornekrasova.ru' + (category.img?.[0]?.formats?.small?.url || '')}
               sizes="100vw"
               priority
             />
             <h3 className={styles.title}>{category.title}</h3>
             <ReactMarkdown className={styles.text}>{category.text}</ReactMarkdown>
             <p className={styles.price}>{category.price}</p>
+            <Link className={styles.prodLink} href={"/product/" + category.slug}>
+              Подробнее
+            </Link>
             <button
               className={styles.addToCartBtn}
-              onClick={() => addToCart({ id: category.id, title: category.title, price: category.price, img: category.img?.[0]?.formats?.thumbnail?.url })}>
+              onClick={() => addToCart({ id: category.id, title: category.title, price: category.price, img: category.img?.[0]?.formats?.small?.url })}>
               В корзину
             </button>
           </div>

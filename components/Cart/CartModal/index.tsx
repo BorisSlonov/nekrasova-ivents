@@ -30,8 +30,13 @@ const CartModal: React.FC<Props> = ({ isOpen, onClose }) => {
     };
 
     const getTotalPrice = cart.reduce((total, item) => {
-        const priceDigits: number = parseFloat(item.price.toString().replace(/[^\d.]/g, ''));
-        return total + priceDigits * item.quantity;
+        if (item.price) {
+            const priceDigits = parseFloat(item.price.toString().replace(/[^\d.]/g, ''));
+            if (!isNaN(priceDigits)) {
+                return total + priceDigits * item.quantity;
+            }
+        }
+        return total;
     }, 0);
 
     return (
@@ -51,7 +56,7 @@ const CartModal: React.FC<Props> = ({ isOpen, onClose }) => {
                         {cart.map((item) => (
                             <div key={item.id} className={styles.cartItem}>
                                 <Image
-                                    src={'https://admin.decornekrasova.ru' + item.img}
+                                    src={`https://admin.decornekrasova.ru${item.img}`}
                                     className={styles.cartImg}
                                     alt={item.title}
                                     width={50}
