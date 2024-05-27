@@ -42,7 +42,7 @@ const CategorySingle = ({ categoryData }: Props) => {
             Все подкатегории
           </button>
           {subcategoryTitles.map((title, index) => (
-            <button className={styles.subcatsbtn} onClick={(e) => setSelectedSubcategory(e.target.value)} key={index} value={title}>{title}</button>
+            <button className={styles.subcatsbtn} onClick={(e) => setSelectedSubcategory((e.target as HTMLButtonElement).value)} key={index} value={title}>{title}</button>
           ))}
         </div>
       </div>
