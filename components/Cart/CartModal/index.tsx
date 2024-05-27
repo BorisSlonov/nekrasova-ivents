@@ -30,7 +30,7 @@ const CartModal: React.FC<Props> = ({ isOpen, onClose }) => {
     };
 
     const getTotalPrice = cart.reduce((total, item) => {
-        const priceDigits: number = parseFloat(item.price.replace(/[^\d.]/g, ''));
+        const priceDigits: number = parseFloat(item.price.toString().replace(/[^\d.]/g, ''));
         return total + priceDigits * item.quantity;
     }, 0);
 
