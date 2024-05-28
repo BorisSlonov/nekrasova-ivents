@@ -85,7 +85,7 @@
 .addToCartBtn {
     display: flex;
     justify-content: center;
-    margin-top: auto;
+    margin-top: 8px;
     display: inline-flex;
     padding: 6px 24px;
     border-radius: 50px;

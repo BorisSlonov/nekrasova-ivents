@@ -7,9 +7,10 @@ import { useInView } from "framer-motion";
 import styles from "./styles.module.css";
 import useCartStore from "@/store/cartStore";
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/navigation';
-import 'swiper/css/pagination';
+import 'swiper/css/pagination'; // Ensure you import the pagination CSS if using pagination
 
 interface Props {
     productData: {
@@ -58,6 +59,7 @@ const PageProduct = ({ productData }: Props) => {
                     {images.length > 2 ? (
                         <Swiper
                             className={styles.slider}
+                            modules={[Navigation, Pagination]}
                             navigation
                             pagination={{ clickable: true }}
                             spaceBetween={50}

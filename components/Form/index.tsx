@@ -28,8 +28,7 @@ const Form: React.FC<FormProps> = ({ cart }) => {
             .join('\n');
 
         const formData = {
-            // 'yes.wedding.tomsk@yandex.ru',
-            toEmail: ['sslonovborisss@gmail.com'],
+            toEmail: ['yes.wedding.tomsk@yandex.ru'],
             subject: 'Заявка с сайта decornekrasova',
             mailText: `Телефон: ${tel}\nИмя: ${name}\nСообщение: ${msg}\n\nКорзина:\n${cartDetails}`,
         };
