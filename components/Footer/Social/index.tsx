@@ -43,9 +43,6 @@ const Social = async () => {
         <Link className={styles.link} href={telegram}>
           <Tlg />
         </Link>
-        <Link className={styles.link} href={Vk}>
-          <Vk />asd
-        </Link>
       </div>
     </div>
   );
