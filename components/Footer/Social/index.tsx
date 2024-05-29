@@ -9,6 +9,7 @@ import Face from "./icons/face";
 import Tlg from "./icons/tlg";
 import Linked from "./icons/linked";
 import { getContacts } from "@/actions/getContacts";
+import Vk from "./icons/vk";
 
 const Social = async () => {
   const {
@@ -42,8 +43,8 @@ const Social = async () => {
         <Link className={styles.link} href={telegram}>
           <Tlg />
         </Link>
-        <Link className={styles.link} href={LinkedIn}>
-          <Linked />
+        <Link className={styles.link} href={Vk}>
+          <Vk />asd
         </Link>
       </div>
     </div>

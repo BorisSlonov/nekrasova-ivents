@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Cart from "@/components/Cart";
+import UpButton from "@/components/UpButton";
 
 
 export const metadata: Metadata = {
@@ -49,6 +50,8 @@ export default function RootLayout({
             <img src="https://mc.yandex.ru/watch/97246546" style={{ position: 'absolute', left: '-9999px' }} alt="" />
           </div>
         </noscript>
+
+        <UpButton />
       </body>
     </html>
   );

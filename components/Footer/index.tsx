@@ -7,6 +7,8 @@ import styles from "./styles.module.css"
 import WaIcon from "../ui/icons/WaIcon";
 import InstIcon from "../ui/icons/InstIcon";
 import TgIcon from "../ui/icons/TgIcon";
+import Vk from "./Social/icons/vk";
+import VkIcon from "../ui/icons/VkIcon";
 
 
 
@@ -84,13 +86,18 @@ const Footer = () => {
                 </a>
               </li>
               <li className="t-sociallinks__item t-sociallinks__item_instagram">
-                <a href="https://instagram.com/purple_giraffe_tomsk" target="_blank" rel="nofollow noopener" aria-label="Instagram" title="Instagram" style={{ width: "30px", height: "30px" }}>
+                <a href="https://www.instagram.com/yes.weding.tomsk/" target="_blank" rel="nofollow noopener" aria-label="Instagram" title="Instagram" style={{ width: "30px", height: "30px" }}>
                   <InstIcon />
                 </a>
               </li>
               <li className="t-sociallinks__item t-sociallinks__item_telegram">
                 <a href="https://t.me/yesweddingtomsk" target="_blank" rel="nofollow noopener" aria-label="Telegram" style={{ width: "30px", height: "30px" }}>
                   <TgIcon />
+                </a>
+              </li>
+              <li className="t-sociallinks__item t-sociallinks__item_telegram">
+                <a href="https://vk.com/decornekrasova" target="_blank" rel="nofollow noopener" aria-label="Vk" style={{ width: "30px", height: "30px" }}>
+                  <VkIcon />
                 </a>
               </li>
             </ul>
