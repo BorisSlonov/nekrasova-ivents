@@ -1,6 +1,6 @@
 export interface ICategoriesCard {
   imgSrc: string;
-  subcategories: {
+  subcats: {
     name: any;
     title: string
   }[];
