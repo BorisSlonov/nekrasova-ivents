@@ -31,7 +31,7 @@ const Category = async ({ params }: Props) => {
     redirect("/categories");
   }
 
-  const title = categoryData[0]?.categories[0]?.title || "";
+  const title = categoryData[0]?.cats[0]?.title || "";
 
   return (
     <section className="otherWrapper">
