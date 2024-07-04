@@ -24,7 +24,7 @@ const CategoriesWrapper = ({ dataCategories, domain }: ICategories) => {
                                 text={item.text}
                                 slug={item.slug}
                                 imgSrc={item.catalogCard ? domain + item.catalogCard.url : ''}
-                                subcategories={item.subcategories} img={[]} id={index} price={item.price} catalogCard={{
+                                subcats={item.subcats} img={[]} id={index} price={item.price} catalogCard={{
                                     url: item.slug
                                 }} />
                         ))}
