@@ -41,7 +41,7 @@ const Form: React.FC<FormProps> = ({ cart }) => {
                     headers: {
                         'Content-Type': 'application/json',
                         Authorization:
-                            'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MywiaWF0IjoxNzE1MzMzODY4LCJleHAiOjE3MTc5MjU4Njh9.DhGoFVuuuNxMto7crHF7PeM62dufzhIjQe2eTzyxlJQ',
+                            'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzIwMDY3NjA2LCJleHAiOjE3MjI2NTk2MDZ9.tRrk_F2222UOixoJ4JG8qGNpfP_6eHezE--ug9X_iKM',
                     },
                     body: JSON.stringify(formData),
                 }
