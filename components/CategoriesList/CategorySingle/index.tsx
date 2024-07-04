@@ -24,7 +24,7 @@ const CategorySingle = ({ categoryData }: Props) => {
     return null;
   }
 
-  const subcategoryTitles = Array.from(new Set(categoryData.flatMap(category => category.subcats.map((sub: { name: any; }) => sub.name))));
+  const subcategoryTitles = Array.from(new Set(categoryData.flatMap(category => category.subcats.map(sub => sub.name))));
 
   const filteredCategoryData = selectedSubcategory
     ? categoryData.filter(category => category.subcats.some(sub => sub.name === selectedSubcategory))
