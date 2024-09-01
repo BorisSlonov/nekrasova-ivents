@@ -12,11 +12,9 @@ interface Props {
 }
 
 const Card = ({ cardData }: Props) => {
-
   const { slug, img, title, date, text } = cardData;
 
   const imgSrc = img.url;
-
   const cardHref = `/blog/${slug}`;
 
   return (
@@ -27,8 +25,11 @@ const Card = ({ cardData }: Props) => {
             <DateBage date={date} />
           </div>
           <div className={styles.title}>{title}</div>
-          <div className={styles.textInfo}>{text}</div>
+          <div className={styles.textInfo}>
+            {text}
+          </div>
         </div>
+
         <Image
           className={styles.cardImage}
           width={397}
@@ -38,6 +39,7 @@ const Card = ({ cardData }: Props) => {
           src={getImageSrc(imgSrc)}
           priority
         />
+
         <div className={styles.linkBtn}>
           <ArrowIcon />
         </div>
@@ -45,5 +47,6 @@ const Card = ({ cardData }: Props) => {
     </Link>
   );
 };
+
 
 export default Card;

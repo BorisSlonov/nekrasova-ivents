@@ -1,12 +1,10 @@
 import React from "react";
 import styles from "./page.module.css";
-import Filters from "@/components/Blog/Filters";
 import Card from "@/components/Blog/Card";
 import YellowGearIcon from "@/components/Blog/icons/yellowGearIcon";
 import TriangleIcon from "@/components/Blog/icons/triangleIcon";
 import CircleIcon from "@/components/Blog/icons/circleIcon";
 import { getArticles } from "@/actions/getArticles";
-import { IBlogFilters } from "@/components/Blog/types";
 import AnimWrap from "@/components/ui/AnimWrap";
 import Reviews from "@/components/Reviews";
 import LastForm from "@/components/LastForm";
@@ -20,8 +18,10 @@ interface Props {
 }
 
 
-const Blog = async ({ params }: Props) => {
+const Blog = async ({ params }: any) => {
   const articlesData = await getArticles(params.slug);
+
+  console.log(articlesData);
 
   const showCards = articlesData && articlesData?.length > 0;
   function cn(arg0: string, arg1: { animated: any; }): string | undefined {

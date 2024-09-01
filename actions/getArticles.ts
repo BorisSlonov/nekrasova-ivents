@@ -1,6 +1,6 @@
 export const getArticles = async (curFilter: string | undefined) => {
   try {
-    const response = await fetch(`${process.env.API_URL}posts/?populate=*`, {
+    const response = await fetch(`${process.env.API_URL}blogs/?populate=*`, {
       next: { revalidate: 60 },
     });
     if (!response.ok) {
